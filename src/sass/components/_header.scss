@@ -74,8 +74,8 @@
 
   &__img {
     display: inline-block;
-    width: 5px;
-    height: 9px;
+    width: 12px;
+    height: 7px;
   }
   &__text {
     position: relative;
@@ -94,15 +94,26 @@
   left: -35;
   transition: opacity 0.2s ease;
   border-radius: 0px 0px 20px 20px;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-  border-left: 1px solid #000;
-  background: #fff;
+  border-right: 1px solid getColor('background-text-primary');
+  border-bottom: 1px solid getColor('background-text-primary');
+  border-left: 1px solid getColor('background-text-primary');
+  background-color: getColor('secondary-text');
   text-align: center;
   width: 160px;
   height: 105px;
   gap: 20px;
   pointer-events: none;
+
+  &__item {
+    height: 35px;
+  }
+
+  &__item:hover {
+    background-color: #f1f1f1;
+  }
+  &__item:nth-child(3) {
+    border-radius: 0px 0px 20px 20px;
+  }
 
   &__link {
     font-size: 12px;
