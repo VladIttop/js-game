@@ -1,16 +1,13 @@
 .header {
   padding: 21px 0;
   .inner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between, $align: center);
     width: 100%;
   }
 }
 
 .header-left {
-  display: flex;
-  align-items: center;
+  @include flex();
   &__link {
     margin-right: 81px;
   }
@@ -21,19 +18,16 @@
 }
 
 .header-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(space-between);
   width: 220px;
   &__link {
     color: getColor('background-text-primary');
-    font-size: 12px;
+    @include text();
   }
 }
 
 .header-right {
-  display: flex;
-  align-items: center;
+  @include flex();
   gap: 51px;
 
   &__btn {
@@ -45,7 +39,7 @@
   }
   &__text {
     color: getColor('background-text-primary');
-    font-size: 12px;
+    @include text();
   }
 }
 .header-right-btn-div {
@@ -68,8 +62,7 @@
 }
 
 .drop-menu {
-  display: flex;
-  align-items: center;
+  @include flex($direction: column);
   margin-right: 50px;
 
   &__img {
@@ -80,7 +73,7 @@
   &__text {
     position: relative;
     color: getColor('background-text-primary');
-    font-size: 12px;
+    @include text();
     cursor: pointer;
   }
 }
@@ -103,7 +96,6 @@
   height: 105px;
   gap: 20px;
   pointer-events: none;
-
   &__item {
     height: 35px;
   }
@@ -116,7 +108,7 @@
   }
 
   &__link {
-    font-size: 12px;
+    @include text();
     color: getColor('background-text-primary');
   }
 }
