@@ -54,3 +54,10 @@ img {
   line-height: normal;
   text-align: center;
 }
+
+.border {
+  width: 536px;
+  height: 0px;
+  stroke-width: 1px;
+  stroke: getColor('background-text-primary');
+}
