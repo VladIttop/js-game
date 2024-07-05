@@ -1,5 +1,9 @@
 .scientist {
   padding: 36px 0;
+
+  .inner-container {
+    @include flex($direction: column, $wrap: wrap);
+  }
 }
 
 .scientist-list {
@@ -7,6 +11,7 @@
   row-gap: 59px;
   column-gap: 36px;
   margin-bottom: 36px;
+  max-width: 577px;
 
   &__item {
     width: 100px;
@@ -20,7 +25,8 @@
   @include flex($wrap: wrap);
   row-gap: 36px;
   column-gap: 20px;
-
+  width: 100%;
+  max-width: 770px;
   &__item {
     padding: 10px 20px;
     border-radius: 20px;
@@ -28,7 +34,7 @@
     box-shadow: 3px 3px 0px 0px getColor('box-shadow');
   }
   &__p {
-    color: getColor("secondary-text");
+    color: getColor('secondary-text');
     @include text();
   }
 }
