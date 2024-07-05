@@ -6,6 +6,10 @@
   }
 }
 
+.inner-container {
+  @include flex()
+}
+
 .football-pitch {
   width: 720px;
   height: 220px;
