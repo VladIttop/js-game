@@ -1,30 +1,33 @@
 <header class="header">
   <div class="inner-container">
     <div class="header-left">
-      <a href="#">
-        <img src="./images/logo.svg" alt="logo" />
-        <span class="header-left__span">Coding</span>
-        <span class="header-left__text">Magic</span>
+      <a href="#" class="header-left__link">
+        <img class="header-left__logo" src="./images/logo.svg" alt="logo" />
       </a>
-
-      <ul class="header-list">
-        <li>
-          <a href="#" class="header-list__link"
-            >Інтерактив
-            <img src="./images/arrow-down.svg" alt="arrow-down" />
-            <ul class="dropdown-menu">
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">Числовий</a>
-              </li>
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">Ігровий</a>
-              </li>
-              <li class="dropdown-menu__item">
-                <a href="#" class="dropdown-menu__link">Ознайомчий</a>
-              </li>
-            </ul>
+      <div class="drop-down">
+        <div class="drop-menu">
+          <a href="#" class="drop-menu__text clickText">
+            Інтерактив
+            <img
+              class="drop-menu__img"
+              src="./images/arrow-down.svg"
+              alt="arrow-down"
+            />
           </a>
-        </li>
+        </div>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Числовий</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Ігровий</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Ознайомчий</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="header-list">
         <li>
           <a href="#" class="header-list__link">Наша команда</a>
         </li>
@@ -35,8 +38,12 @@
     </div>
     <div class="header-right">
       <button class="header-right__btn">
-        <div class="header-right-btn__img">
-          <img src="./images/light.svg" alt="" />
+        <div class="header-right-btn-div">
+          <img
+            src="./images/light.svg"
+            alt=""
+            class="header-right-btn-div__img"
+          />
         </div>
       </button>
       <p class="header-right__text">
