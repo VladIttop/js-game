@@ -1,0 +1,31 @@
+.modal{
+    width: 576px;
+    height: 316px;
+    border-radius: black;
+}
+.span-modal{
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.section__modal{
+    margin: 0;
+}
+.p-text{
+@include mixin-text( $fsize, $lheight, $fweight, $fstyle);
+}
+.p-name{
+@include mixin-text( $fsize, $lheight, $fweight, $fstyle);
+}
+.modal__input{
+    background-color: getColor(input-background);
+    color: getColor(input-placeholder);
+    border-radius: 20px;
+    margin-top:18px;
+    margin-bottom: 18px;
+}
+.modal__button{
+    background-color: getColor(background-text-primary);
+    color: getColor(secondary-text);
+    border-radius:20xp;
+    margin: 10px, 20px, 10px, 20px;
+}
