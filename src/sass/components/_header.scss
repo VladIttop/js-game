@@ -1,0 +1,119 @@
+.header {
+  padding: 21px 0;
+  .inner-container {
+    @include flex(space-between, $align: center);
+    width: 100%;
+  }
+}
+
+.header-left {
+  @include flex();
+  &__link {
+    margin-right: 81px;
+  }
+  &__logo {
+    width: 93px;
+    height: 38px;
+  }
+}
+
+.header-list {
+  @include flex(space-between);
+  width: 220px;
+  &__link {
+    color: getColor('background-text-primary');
+    @include text();
+  }
+}
+
+.header-right {
+  @include flex();
+  gap: 51px;
+
+  &__btn {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 11px;
+    background-color: #7a7a7a;
+  }
+  &__text {
+    color: getColor('background-text-primary');
+    @include text();
+  }
+}
+.header-right-btn-div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: getColor('secondary-text');
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transition: left 75ms linear;
+}
+.header-right-btn-div.clicked {
+  left: 20;
+  background-color: getColor('background-text-primary');
+}
+
+.drop-down {
+  position: relative;
+}
+
+.drop-menu {
+  @include flex($direction: column);
+  margin-right: 50px;
+
+  &__img {
+    display: inline-block;
+    width: 12px;
+    height: 7px;
+  }
+  &__text {
+    position: relative;
+    color: getColor('background-text-primary');
+    @include text();
+    cursor: pointer;
+  }
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: -35;
+  transition: opacity 0.2s ease;
+  border-radius: 0px 0px 20px 20px;
+  border-right: 1px solid getColor('background-text-primary');
+  border-bottom: 1px solid getColor('background-text-primary');
+  border-left: 1px solid getColor('background-text-primary');
+  background-color: getColor('secondary-text');
+  text-align: center;
+  width: 160px;
+  height: 105px;
+  gap: 20px;
+  pointer-events: none;
+  &__item {
+    height: 35px;
+  }
+
+  &__item:hover {
+    background-color: #f1f1f1;
+  }
+  &__item:nth-child(3) {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  &__link {
+    @include text();
+    color: getColor('background-text-primary');
+  }
+}
+
+.dropdown-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
