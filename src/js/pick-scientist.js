@@ -84,20 +84,34 @@ const scientists = [
     id: 12,
   },
 ];
+const allBtns = document.querySelectorAll('.facts-list__btn');
+allBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    console.log(btn.getAttribute('data-value'));
+    switch (btn.getAttribute('data-value')) {
+      case 'birth':
+        birthCheck();
+        break;
+
+      case 'alphabet':
+        alphabet();
+        break;
+      default:
+        break;
+    }
+  });
+});
 
 const nameParagraphs = document.querySelectorAll('#name');
 const surname = document.querySelectorAll('#surname');
 const birthYear = document.querySelectorAll('#birthYear');
 const deathYear = document.querySelectorAll('#deathYear');
 
-const clearItems = function () {
-  nameParagraphs.textContent = '';
-  surname.textContent = '';
-  birthYear.textContent = '';
-  deathYear.textContent = '';
-};
+const yearOfBirth = scientists.map((scientist) => scientist.born);
+const yearOfDeath = scientists.map((scientist) => scientist.dead);
+
+
 birthCheck = function () {
-  clearItems();
   const filteredElements = scientists.filter(
     scientist => scientist.born >= 1801 && scientist.born <= 1900
   );
@@ -128,10 +142,13 @@ const albertEinstein = function () {
 };
 
 const alphabet = function () {
-  clearItems();
   const allScientists = scientists.map(scientist => scientist.surname);
+  const scientistBorn = allScientists.map(scientist => scientist.born)
   allScientists.sort();
   surname.forEach((paragraph, index) => {
     paragraph.textContent = allScientists[index];
+  });
+  birthYear.forEach((paragraph) => {
+    paragraph.textContent = scientistBorn;
   });
 };

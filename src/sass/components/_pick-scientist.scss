@@ -18,7 +18,7 @@
   max-width: 577px;
 
   &__item {
-    @include flex($direction:column);
+    @include flex($direction: column);
     width: 100px;
     height: 100px;
     border-radius: 20px;
@@ -32,14 +32,13 @@
   column-gap: 20px;
   width: 100%;
   max-width: 770px;
-  &__item {
+
+  &__btn {
     padding: 10px 20px;
     border-radius: 20px;
-    background: getColor('background-text-primary');
+    background-color: getColor('background-text-primary');
     box-shadow: 3px 3px 0px 0px getColor('box-shadow');
     cursor: pointer;
-  }
-  &__p {
     color: getColor('secondary-text');
     @include text();
   }
@@ -53,7 +52,8 @@
   @include text(8px, 14px);
 }
 
-.whole-name, .date {
+.whole-name,
+.date {
   display: flex;
   gap: 3px;
 }
