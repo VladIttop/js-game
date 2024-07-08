@@ -1,0 +1,5 @@
+.rock-paper{
+    &__title{
+        @include text(16px)
+    }
+}
