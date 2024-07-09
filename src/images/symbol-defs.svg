@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- Arrow-down -->
+        <symbol id="arrow-down" width="11" height="7">
+            <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"
+                d="M10 1 5.5 6 1 1" />
+        </symbol>
+
+        <!-- Close icon -->
+        <symbol id="close-icon" width="11" height="7">
+            <path stroke="#000" d="m1 1 7.5 7.5M16 16 8.5 8.5m0 0L16 1 1 16" />
+        </symbol>
+        <!-- cursor -->
+        <symbol id="cursor" width="11" height="7">
+            <path fill="#000" stroke="#000" stroke-linejoin="round" stroke-width="5"
+                d="M11.728 20.213 3.243 3.243l16.97 8.485-7.032 1.453-1.453 7.032Z" />
+        </symbol>
+        <!-- logo -->
+        <symbol id="logo" width="11" height="7">
+            <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m11 12.429-10 10 10 10M31 12.429l10 10-10 10" />
+            <path fill="#000"
+                d="m24.535 5.043-8.587 32.046a.816.816 0 1 1-1.577-.422L22.958 4.62a.816.816 0 0 1 1.577.423Z" />
+            <path fill="#D9D9D9"
+                d="M22.958 4.62a.816.816 0 0 1 1.577.423l-1.046 3.903-1.577-.423 1.046-3.903Z" />
+            <path stroke="#000" stroke-linecap="round"
+                d="m25.695 7.022 3.154.846M17.81 4.91l3.154.845M19.646 1.211l1.637 2.81M17.587 8.897l2.822-1.615M25.276 8.586l1.637 2.81M26.15 5.324l2.823-1.614" />
+        </symbol>
+        <!-- search-logo -->
+        <symbol id="search-logo" width="11" height="7">
+            <path fill="#fff"
+                d="M14.293 15.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-2.825-5.653-.707-.707-1.414 1.414.707.707 1.414-1.414Zm4.24 4.239-4.24-4.24-1.414 1.415 4.239 4.24 1.414-1.415Z" />
+        </symbol>
+        <!-- sword -->
+        <symbol id="search-logo" width="11" height="7">
+            <path fill="url(#a)" d="M0 0h30v30H0z" />
+        </symbol>
+        <!-- arrow-left -->
+        <symbol id="arrow-left" width="11" height="7">
+            <path d="M51 1L1 51L51 101" stroke="black" />
+        </symbol>
+        <!-- arrow-right -->
+        <symbol id="arrow-right" width="11" height="7">
+            <path d="M1 1L51 51L1 101" stroke="black" />
+        </symbol>
+    </defs>
+</svg>
