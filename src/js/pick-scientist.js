@@ -243,5 +243,23 @@ const deleteA = function () {
 };
 
 const nameSurname = function() {
-const filteredElements = scientist.filter()
+const filteredElements = scientists.filter((scientist) => scientist.name[0] === scientist.surname[0]);
+
+const filteredNames = filteredElements.map(scientist => scientist.name);
+const filteredSurname = filteredElements.map(scientist => scientist.surname);
+const filteredYear = filteredElements.map(scientist => scientist.born);
+const filteredDeath = filteredElements.map(scientist => scientist.dead);
+
+nameParagraphs.forEach((paragraph, index) => {
+  paragraph.textContent = filteredNames[index];
+});
+surname.forEach((paragraph, index) => {
+  paragraph.textContent = filteredSurname[index];
+});
+birthYear.forEach((paragraph, index) => {
+  paragraph.textContent = filteredYear[index];
+});
+deathYear.forEach((paragraph, index) => {
+  paragraph.textContent = filteredDeath[index];
+});
 };
