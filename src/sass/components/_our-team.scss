@@ -1,0 +1,3 @@
+.slider__title{
+    @include mixin-text($fsize: 16px, $lheight, $fweight, $fstyle)
+}
