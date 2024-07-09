@@ -108,6 +108,9 @@ allBtns.forEach(btn => {
       case 'delete-a':
         deleteA();
         break;
+
+      case 'surname-name':
+        nameSurname();
       default:
         break;
     }
@@ -237,4 +240,8 @@ const deleteA = function () {
   deathYear.forEach((paragraph, index) => {
     paragraph.textContent = filteredDeath[index];
   });
+};
+
+const nameSurname = function() {
+const filteredElements = scientist.filter()
 };
