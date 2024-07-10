@@ -92,38 +92,41 @@ allBtns.forEach(btn => {
       case 'birth':
         birthCheck();
         break;
-
       case 'einstein':
         albertEinstein();
         break;
-
       case 'alphabet':
         alphabet();
         break;
-
       case 'find-c':
         findC();
         break;
-
       case 'delete-a':
         deleteA();
+        break;
+      case 'yearsSort':
+        yearsSort();
+        break;
+      case 'earlyYears':
+        earlyYears();
+        break;
+      case 'longestAndSmallestYears':
+        longestAndSmallestYears();
         break;
 
       case 'surname-name':
         nameSurname();
+        break;
       default:
         break;
     }
   });
 });
 
-const nameParagraphs = document.querySelectorAll('#name');
-const surname = document.querySelectorAll('#surname');
+const nameParagraphs = document.querySelectorAll('.name');
+const surname = document.querySelectorAll('.surname');
 const birthYear = document.querySelectorAll('.birthYear');
 const deathYear = document.querySelectorAll('.deathYear');
-
-const yearOfBirth = scientists.map(scientist => scientist.born);
-const yearOfDeath = scientists.map(scientist => scientist.dead);
 
 const birthCheck = function () {
   const filteredElements = scientists.filter(
@@ -242,24 +245,90 @@ const deleteA = function () {
   });
 };
 
-const nameSurname = function() {
-const filteredElements = scientists.filter((scientist) => scientist.name[0] === scientist.surname[0]);
+const nameSurname = function () {
+  const filteredElements = scientists.filter(
+    scientist => scientist.name[0] === scientist.surname[0]
+  );
 
-const filteredNames = filteredElements.map(scientist => scientist.name);
-const filteredSurname = filteredElements.map(scientist => scientist.surname);
-const filteredYear = filteredElements.map(scientist => scientist.born);
-const filteredDeath = filteredElements.map(scientist => scientist.dead);
+  const filteredNames = filteredElements.map(scientist => scientist.name);
+  const filteredSurname = filteredElements.map(scientist => scientist.surname);
+  const filteredYear = filteredElements.map(scientist => scientist.born);
+  const filteredDeath = filteredElements.map(scientist => scientist.dead);
 
-nameParagraphs.forEach((paragraph, index) => {
-  paragraph.textContent = filteredNames[index];
-});
-surname.forEach((paragraph, index) => {
-  paragraph.textContent = filteredSurname[index];
-});
-birthYear.forEach((paragraph, index) => {
-  paragraph.textContent = filteredYear[index];
-});
-deathYear.forEach((paragraph, index) => {
-  paragraph.textContent = filteredDeath[index];
-});
+  nameParagraphs.forEach((paragraph, index) => {
+    paragraph.textContent = filteredNames[index];
+  });
+  surname.forEach((paragraph, index) => {
+    paragraph.textContent = filteredSurname[index];
+  });
+  birthYear.forEach((paragraph, index) => {
+    paragraph.textContent = filteredYear[index];
+  });
+  deathYear.forEach((paragraph, index) => {
+    paragraph.textContent = filteredDeath[index];
+  });
 };
+
+const yearsSort = function () {
+  const filteredElements = scientists.sort((a, b) => a.born - b.born);
+  const filteredNames = filteredElements.map(scientist => scientist.name);
+  const filteredSurname = filteredElements.map(scientist => scientist.surname);
+  const filteredYear = filteredElements.map(scientist => scientist.born);
+  const filteredDeath = filteredElements.map(scientist => scientist.dead);
+
+  nameParagraphs.forEach((paragraph, index) => {
+    paragraph.textContent = filteredNames[index];
+  });
+  surname.forEach((paragraph, index) => {
+    paragraph.textContent = filteredSurname[index];
+  });
+  birthYear.forEach((paragraph, index) => {
+    paragraph.textContent = filteredYear[index];
+  });
+  deathYear.forEach((paragraph, index) => {
+    paragraph.textContent = filteredDeath[index];
+  });
+};
+
+const earlyYears = function () {
+  nameParagraphs.forEach(paragraph => {
+    paragraph.textContent = '';
+  });
+  surname.forEach(paragraph => {
+    paragraph.textContent = '';
+  });
+  birthYear.forEach(paragraph => {
+    paragraph.textContent = '';
+  });
+  deathYear.forEach(paragraph => {
+    paragraph.textContent = '';
+  });
+
+  const filteredElement = scientists.sort((a, b) => b.born - a.born)[0];
+
+  if (filteredElement) {
+    nameParagraphs[0].textContent = filteredElement.name;
+    surname[0].textContent = filteredElement.surname;
+    birthYear[0].textContent = filteredElement.born;
+    deathYear[0].textContent = filteredElement.dead;
+  }
+};
+
+const longestAndSmallestYears = function () {
+  const earlyFiltered = scientists.sort((a, b) => a.born - b.born)[0];
+  if (earlyFiltered) {
+    nameParagraphs[0].textContent = earlyFiltered.name;
+    surname[0].textContent = earlyFiltered.surname;
+    birthYear[0].textContent = earlyFiltered.born;
+    deathYear[0].textContent = earlyFiltered.dead;
+  }
+
+  const latestFiltered = scientists.sort((a, b) => b.born - a.born)[0];
+  if (latestFiltered) {
+    nameParagraphs[1].textContent = latestFiltered.name;
+    surname[1].textContent = latestFiltered.surname;
+    birthYear[1].textContent = latestFiltered.born;
+    deathYear[1].textContent = latestFiltered.dead;
+  }
+};
+
