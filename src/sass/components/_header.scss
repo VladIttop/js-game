@@ -120,7 +120,7 @@
   pointer-events: auto;
 }
 
-.drop-menu__img {
+.drop-menu__img.rotated {
   transform: rotate(180deg);
-  transition: transform 0.5s linear;
+  transition: transform 0.3s linear;
 }

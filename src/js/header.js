@@ -1,8 +1,9 @@
 const clickText = document.querySelector('.clickText');
 const dropMenu = document.querySelector('.dropdown-menu');
-const 
+const arrow = document.querySelector(".drop-menu__img")
 clickText.addEventListener('click', () => {
   dropMenu.classList.toggle('is-open');
+  arrow.classList.toggle("rotated")
 });
 
 const btn = document.querySelector('.header-right__btn');
