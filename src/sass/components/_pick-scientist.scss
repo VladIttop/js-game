@@ -28,8 +28,8 @@
 
 .facts-list {
   @include flex($wrap: wrap);
-  row-gap: 36px;
-  column-gap: 20px;
+  column-gap: 36px;
+  row-gap: 20px;
   width: 100%;
   max-width: 770px;
 
