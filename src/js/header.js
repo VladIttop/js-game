@@ -1,5 +1,6 @@
 const clickText = document.querySelector('.clickText');
 const dropMenu = document.querySelector('.dropdown-menu');
+const 
 clickText.addEventListener('click', () => {
   dropMenu.classList.toggle('is-open');
 });

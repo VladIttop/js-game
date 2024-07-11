@@ -70,11 +70,12 @@
     width: 12px;
     height: 7px;
   }
-  &__text {
+  &__btn {
     position: relative;
     color: getColor('background-text-primary');
     @include text();
     cursor: pointer;
+    background-color: transparent;
   }
 }
 
@@ -83,6 +84,7 @@
   flex-direction: column;
   opacity: 0;
   position: absolute;
+  margin-top: 20px;
   top: 100%;
   left: -35;
   transition: opacity 0.2s ease;
@@ -93,7 +95,6 @@
   background-color: getColor('secondary-text');
   text-align: center;
   width: 160px;
-  height: 105px;
   gap: 20px;
   pointer-events: none;
   &__item {
@@ -110,10 +111,16 @@
   &__link {
     @include text();
     color: getColor('background-text-primary');
+    text-align: center;
   }
 }
 
 .dropdown-menu.is-open {
   opacity: 1;
   pointer-events: auto;
+}
+
+.drop-menu__img {
+  transform: rotate(180deg);
+  transition: transform 0.5s linear;
 }
