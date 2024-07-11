@@ -1,3 +1,21 @@
 .slider__title{
     @include mixin-text($fsize: 16px, $lheight, $fweight, $fstyle)
 }
+.slider-list{
+    display: flex;
+    justify-content: space-between;
+}
+.slider-list__box{
+    width:150px;
+    height:150px;
+    background-color: getColor('card-background');
+    border-radius: 20px;
+}
+.slider-list__name{
+    @include mixin-text($fsize: 14px, $lheight, $fweight, $fstyle);
+    margin-top:20px;
+    color: getColor('background-text-primary');
+}
+.slider-list__info{
+    
+}
