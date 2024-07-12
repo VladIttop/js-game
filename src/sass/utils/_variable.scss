@@ -1,14 +1,23 @@
-$colors: (
-  'background-primary': #1e1823,
-  'background-text-primary': #000,
-  'input-background': #d7d7d7,
-  'green-text': #039900,
-  'red-text': #900,
-  'secondary-text': #fff,
-  'input-placeholder': #7e7e7e,
-  'card-background': #d9d9d9,
-  'box-shadow': 3px 3px 0px 0px rgba(0, 0, 0, 0.25),
-);
-@function getColor($key) {
-  @return map-get($colors, $key);
+:root {
+  --background-text-primary: #000;
+  --background-primary: #1e1823;
+  --input-background: #d7d7d7;
+  --green-text: #039900;
+  --red-text: #900;
+  --secondary-text: #fff;
+  --input-placeholder: #7e7e7e;
+  --card-background: #d9d9d9;
+  --box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  --background-text-primary: #fff;
+  --background-primary: #1e1823;
+  --input-background: #d7d7d7;
+  --green-text: #039900;
+  --red-text: #900;
+  --secondary-text: #6f6f6f;
+  --input-placeholder: #a4a4a4;
+  --card-background: #fff;
+  --box-shadow: 3px 3px 0px 0px rgba(154, 154, 154, 1);
 }

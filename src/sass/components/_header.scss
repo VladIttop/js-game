@@ -1,5 +1,6 @@
 .header {
   padding: 21px 0;
+  background-color: var(--secondary-text);
   .inner-container {
     @include flex(space-between, $align: center);
     width: 100%;
@@ -21,8 +22,12 @@
   @include flex(space-between);
   width: 220px;
   &__link {
-    color: getColor('background-text-primary');
+    color: var(--background-text-primary);
     @include text();
+    transition: color 0.3s linear;
+    .dark &:hover {
+      color: #1b1313;
+    }
   }
 }
 
@@ -38,7 +43,7 @@
     background-color: #7a7a7a;
   }
   &__text {
-    color: getColor('background-text-primary');
+    color: var(--background-text-primary);
     @include text();
   }
 }
@@ -46,7 +51,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: getColor('secondary-text');
+  background-color: var(--secondary-text);
   border-radius: 50%;
   left: 0;
   top: 0;
@@ -54,7 +59,7 @@
 }
 .header-right-btn-div.clicked {
   left: 20;
-  background-color: getColor('background-text-primary');
+  background-color: var(--background-text-primary);
 }
 
 .drop-down {
@@ -64,6 +69,7 @@
 .drop-menu {
   @include flex($direction: column);
   margin-right: 50px;
+  background-color: var(--secondary-text);
 
   &__img {
     display: inline-block;
@@ -72,10 +78,14 @@
   }
   &__btn {
     position: relative;
-    color: getColor('background-text-primary');
+    color: var(--background-text-primary);
     @include text();
     cursor: pointer;
     background-color: transparent;
+    transition: color 0.3s linear;
+    &:hover .dark {
+      color: #1b1313;
+    }
   }
 }
 
@@ -89,14 +99,15 @@
   left: -35;
   transition: opacity 0.2s ease;
   border-radius: 0px 0px 20px 20px;
-  border-right: 1px solid getColor('background-text-primary');
-  border-bottom: 1px solid getColor('background-text-primary');
-  border-left: 1px solid getColor('background-text-primary');
-  background-color: getColor('secondary-text');
+  border-right: 1px solid var(--background-text-primary);
+  border-bottom: 1px solid var(--background-text-primary);
+  border-left: 1px solid var(--background-text-primary);
+  background-color: var(--secondary-text);
   text-align: center;
   width: 160px;
   gap: 20px;
   pointer-events: none;
+  z-index: 999;
   &__item {
     height: 35px;
   }
@@ -104,18 +115,21 @@
   &__item:hover {
     background-color: #f1f1f1;
   }
+  .dark &__item:hover .dropdown-menu__link{
+    color: var(--secondary-text);
+  }
   &__item:nth-child(3) {
     border-radius: 0px 0px 20px 20px;
   }
 
   &__link {
     @include text();
-    color: getColor('background-text-primary');
+    color: var(--background-text-primary);
     text-align: center;
   }
 }
 
-.dropdown-menu.is-open {
+.dropdown-menu.is-open{
   opacity: 1;
   pointer-events: auto;
 }
@@ -123,4 +137,8 @@
 .drop-menu__img.rotated {
   transform: rotate(180deg);
   transition: transform 0.3s linear;
+}
+
+.header-right-btn-div.clicked {
+background-color: #000;
 }
