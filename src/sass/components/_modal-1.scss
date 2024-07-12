@@ -13,10 +13,10 @@
     margin: 0;
 }
 .modal-content__text{
-@include mixin-text( $fsize, $lheight, $fweight, $fstyle);
+@include text( $fsize, $lheight, $fweight, $fstyle);
 }
 .modal-content__name{
-@include mixin-text( $fsize, $lheight, $fweight, $fstyle);
+@include text( $fsize, $lheight, $fweight, $fstyle);
 }
 .modal-content__input{
     background-color: getColor(input-background);
