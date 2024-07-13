@@ -1,4 +1,3 @@
-
 .football {
   padding-top: 36px;
 
@@ -8,7 +7,7 @@
 }
 
 .inner-container {
-  @include flex($direction:column)
+  @include flex($direction: column);
 }
 
 .football-pitch {
@@ -18,6 +17,8 @@
   border-radius: 37px;
   border: 2px solid getColor('background-text-primary');
   background-color: #5abb58;
+  cursor: pointer;
+  overflow: hidden;
 
   &__ball {
     position: absolute;
@@ -25,6 +26,8 @@
     left: 92px;
     width: 50px;
     height: 50px;
+    transition: left 0.4s ease-in-out, top 0.4s ease-in-out;
+    user-select: none;
   }
 
   &__cursor {
@@ -33,5 +36,5 @@
     height: 18px;
     top: 99px;
     right: 214px;
-    }
+  }
 }
