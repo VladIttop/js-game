@@ -10,26 +10,24 @@
     margin-right: 30px;
 }
 .modal-content{
-    margin: 0;
 }
-.modal-content__text{
-@include text( $fsize, $lheight, $fweight, $fstyle);
-}
-.modal-content__name{
-@include text( $fsize, $lheight, $fweight, $fstyle);
-}
+
 .modal-content__input{
     background-color: getColor(input-background);
     color: getColor(input-placeholder);
     border-radius: 20px;
     margin-top:18px;
     margin-bottom: 18px;
+    width: 169px;
+    height: 35px;
 }
 .modal-content__button{
     background-color: getColor(background-text-primary);
     color: getColor(secondary-text);
-    border-radius:20xp;
+    border-radius: 20xp;
     margin: 10px, 20px, 10px, 20px;
+    width: 105px;
+    height: 35px;
 }
 .modal__svg{
     width:30px;
