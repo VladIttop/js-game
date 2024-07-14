@@ -1,5 +1,5 @@
 .slider__title{
-    @include mixin-text($fsize: 16px, $lheight, $fweight, $fstyle)
+    margin: 0;
 }
 .slider-list{
     display: flex;
@@ -12,7 +12,6 @@
     border-radius: 20px;
 }
 .slider-list__name{
-    @include mixin-text($fsize: 14px, $lheight, $fweight, $fstyle);
     margin-top:20px;
     color: getColor('background-text-primary');
 }
