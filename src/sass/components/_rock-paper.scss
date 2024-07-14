@@ -1,6 +1,23 @@
 .rock-paper{
+    @include flex($direction: column);
     &__title{
-        @include text(16px)
+        @include text(16px);
+        color: getColor('background-text-primary');
+    }
+    &__result{
+        @include text(16px);
+        color: getColor('green-text');
+    }
+    &-computer-option{
+        @include text;
+        color: getColor('secondary-text');
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: getColor('background-text-primary');
+    }
+    &-score__text{
+        @include text;
+        color: getColor('background-text-primary');
     }
 }
 .rock-paper-list{
@@ -12,5 +29,9 @@
         width: 60px;
         height: 60px;
         background-color: getColor('background-text-primary');
+    }
+    &__icon{
+        width: 40px;
+        height: 40px;
     }
 }
