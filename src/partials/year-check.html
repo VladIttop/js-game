@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The test of the test</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 20%;
+        }
+        input[type=number] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px 20px 20px 20px; 
+            background-color: #D7D7D7;
+            margin: 0px;
+            
+        }
+
+f
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px 20px 20px 20px;
+            background-color: black;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Перевір в який рік ти народився</h1>
+    <input type="number" id="yearInput" placeholder="Введіть рік народження">
+    <button onclick="checkYear()">🔍</button>
+    <div class="message" id="message"></div>
+    <script>
+        function isLeapYear(year) {
+            return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        }
+
+        function checkYear() {
+            const year = parseInt(document.getElementById('yearInput').value);
+            const message = document.getElementById('message');
+
+            if (isLeapYear(year)) {
+                message.textContent = 'Ви народилися у високосний рік!';
+                message.className = 'message success';
+            } else {
+                message.textContent = 'Ви народилися не у високосний рік!';
+                message.className = 'message error';
+            }
+        }
+    </script>
+</body>
+</html>
