@@ -1,4 +1,9 @@
 const calculator = document.getElementById('calculator');
+const timeCalculator = document.getElementById('time-calculator');
+const biggestNumber = document.getElementById('biggest-number');
+const rockPaper = document.getElementById('rock-paper');
+const dinosaur = document.getElementById('dinosaur');
+
 
 const games = [
   // {
@@ -11,36 +16,36 @@ const games = [
   //   name: 'Вгадай число',
   //   category: 'numerical',
   // },
-  // {
-  //   id: rockPaper,
-  //   name: 'Камінь-Ножиці-Папір',
-  //   category: 'game',
-  // },
   {
-    id: document.getElementById('calculator'),
+    id: rockPaper,
+    name: 'Камінь-Ножиці-Папір',
+    category: 'game',
+  },
+  {
+    id: calculator,
     name: 'Калькулятор',
     category: 'numerical',
   },
-  //{
-  //   id: document.getElementById('time-calculator'),
-  //   name: 'Калькулятор часу',
-  //   category: 'numerical',
-  // },
-  // {
-  //   id: 6,
-  //   name: 'Google динозаврик',
-  //   category: 'game',
-  // },
-  // {
+  {
+    id: timeCalculator,
+    name: 'Калькулятор часу',
+    category: 'numerical',
+  },
+  {
+    id: dinosaur,
+    name: 'Google динозаврик',
+    category: 'game',
+  },
+  //  {
   //   id: 7,
   //   name: 'Футбол',
   //   category: 'game',
   // },
-  // {
-  //   id: document.getElementById('biggest-number'),
-  //   name: 'Найбільше число',
-  //   category: 'numerical',
-  // },
+  {
+    id: biggestNumber,
+    name: 'Найбільше число',
+    category: 'numerical',
+  },
   // {
   //   id: 9,
   //   name: 'Наша команда',
@@ -74,7 +79,14 @@ numerical.addEventListener('click', () => {
   });
 });
 
-console.log(games.id);
+game.addEventListener('click', () => {
+  allSections.forEach(section => {
+    section.style.display = 'none';
+  });
+  gameGames.forEach(game => {
+    game.id.style.display = 'block';
+  });
+});
 
 const clickText = document.querySelector('.clickText');
 const dropMenu = document.querySelector('.dropdown-menu');
