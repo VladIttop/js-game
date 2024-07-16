@@ -1,0 +1,40 @@
+.football {
+  padding-top: 36px;
+
+  &__title {
+    margin-bottom: 36px;
+  }
+}
+
+.inner-container {
+  @include flex($direction: column);
+}
+
+.football-pitch {
+  position: relative;
+  width: 720px;
+  height: 220px;
+  border-radius: 37px;
+  border: 2px solid getColor('background-text-primary');
+  background-color: #5abb58;
+  cursor: url("../images/cursor.svg"), pointer;
+  overflow: hidden;
+
+  &__ball {
+    position: absolute;
+    top: 85px;
+    left: 92px;
+    width: 50px;
+    height: 50px;
+    transition: left 0.4s ease-in-out, top 0.4s ease-in-out;
+    user-select: none;
+  }
+
+  &__cursor {
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    top: 99px;
+    right: 214px;
+  }
+}
