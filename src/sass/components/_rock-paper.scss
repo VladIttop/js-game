@@ -1,7 +1,7 @@
 .rock-paper{
     @include flex($direction: column);
     gap: 36px;
-    padding: 36px 220px 0 417px;
+    padding: 36px 277px 0 220px;
     &__title{
         @include text(16px);
         color: getColor('background-text-primary');
@@ -26,8 +26,9 @@
     width: 256px;
     @include flex(space-between); 
     &-container{
-    width: 463px;
+        width: 456px;
     @include flex(space-between);
+    margin-left: 220px;
     }
     &__button{
         border-radius: 20px;
