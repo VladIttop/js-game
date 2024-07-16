@@ -28,6 +28,9 @@
     .dark &:hover {
       color: #1b1313;
     }
+    &:hover {
+      color: #808080;
+    }
   }
 }
 
@@ -76,6 +79,9 @@
     display: inline-block;
     width: 12px;
     height: 7px;
+    margin-left: 8px;
+    stroke: #fff;
+    background: none;
   }
   &__btn {
     position: relative;
@@ -86,6 +92,9 @@
     transition: color 0.3s linear;
     .dark &:hover {
       color: #1b1313;
+    }
+    &:hover {
+      color: #808080;
     }
   }
 }
@@ -117,7 +126,7 @@
   &__item:hover {
     background-color: #f1f1f1;
   }
-  .dark &__item:hover .dropdown-menu__link{
+  .dark &__item:hover .dropdown-menu__link {
     color: var(--secondary-text);
   }
   &__item:nth-child(4) {
@@ -131,7 +140,7 @@
   }
 }
 
-.dropdown-menu.is-open{
+.dropdown-menu.is-open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -142,5 +151,5 @@
 }
 
 .header-right-btn-div.clicked {
-background-color: #000;
+  background-color: #000;
 }
