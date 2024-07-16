@@ -4,7 +4,6 @@ const biggestNumber = document.getElementById('biggest-number');
 const rockPaper = document.getElementById('rock-paper');
 const dinosaur = document.getElementById('dinosaur');
 
-
 const games = [
   // {
   //   id: document.querySelector('#year-check'),
@@ -92,7 +91,6 @@ const showSections = document.getElementById("showSections");
 showSections.addEventListener("click", () => {
 allSections.forEach(section => {
   section.style.display = "block";
-
 })
 })
 
