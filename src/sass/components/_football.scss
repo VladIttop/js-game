@@ -17,7 +17,7 @@
   border-radius: 37px;
   border: 2px solid getColor('background-text-primary');
   background-color: #5abb58;
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), pointer;
   overflow: hidden;
 
   &__ball {
