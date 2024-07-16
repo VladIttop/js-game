@@ -1,0 +1,35 @@
+.calculator{
+    padding: 36px 230px 0;
+    &__title{
+        @include text(16px);
+        color: getColor('background-text-primary');
+    }
+    &__input{
+        background-color: getColor('input-background');
+        border: 1px solid getColor('input-background');
+        box-shadow: getColor('box-shadow');
+            width: 136px;
+            height: 35px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            &::placeholder{
+            @include text;
+            color: getColor('input-placeholder');
+            text-align: center;
+        }
+        &:hover, &:focus{
+            outline: none;
+        }
+    }
+}
+.calculator-operators-list{
+    @include flex(space-between, $wrap: wrap);
+    &__item{
+        border-radius: 20px;
+            padding: 5px 10px;
+            width: 27px;
+            height: 25px;
+        box-shadow: getColor('box-shadow');
+        background-color: getColor('background-text-primary');
+    }
+}
