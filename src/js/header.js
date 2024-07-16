@@ -88,6 +88,14 @@ game.addEventListener('click', () => {
   });
 });
 
+const showSections = document.getElementById("showSections");
+showSections.addEventListener("click", () => {
+allSections.forEach(section => {
+  section.style.display = "block";
+
+})
+})
+
 const clickText = document.querySelector('.clickText');
 const dropMenu = document.querySelector('.dropdown-menu');
 const arrow = document.querySelector('.drop-menu__img');
