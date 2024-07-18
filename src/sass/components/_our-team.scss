@@ -13,8 +13,10 @@
 }
 .slider-list__name{
     margin-top:20px;
+    margin-bottom:20px;
     color: getColor('background-text-primary');
 }
 .slider-list__info{
-    
+    @mixin text{$fsize:12px; $lheight:normal; $fweight:400; $fstyle: normal };
+    color: detColor('background-text-primary');
 }
