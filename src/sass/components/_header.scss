@@ -34,6 +34,16 @@
   }
 }
 
+.drop-menu__btn {
+  stroke: #000;
+}
+
+.dark .drop-menu__btn {
+  svg {
+    stroke: #fff;
+  }
+}
+
 .header-right {
   @include flex();
   gap: 51px;
@@ -75,14 +85,6 @@
   margin-right: 50px;
   background-color: var(--secondary-text);
 
-  &__img {
-    display: inline-block;
-    width: 12px;
-    height: 7px;
-    margin-left: 8px;
-    stroke: #fff;
-    background: none;
-  }
   &__btn {
     position: relative;
     color: var(--background-text-primary);
@@ -96,6 +98,10 @@
     &:hover {
       color: #808080;
     }
+  }
+
+  &__img {
+    transition: transform 0.3s linear;
   }
 }
 
