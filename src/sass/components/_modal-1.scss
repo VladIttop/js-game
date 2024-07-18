@@ -12,8 +12,14 @@
 .modal-content{
     width: 392px;
     height: 223px;
+    text-align: center;
 }
-
+.modal-content__text{
+    @mixin text{$fsize: 12px; lheight: normal; $fweight: 400; $fstyle: normal};
+    width: 392px;
+    height:60px;
+    margin-bottom: 42px;
+}
 .modal-content__input{
     background-color: getColor(input-background);
     color: getColor(input-placeholder);
@@ -26,10 +32,10 @@
 .modal-content__button{
     background-color: getColor(background-text-primary);
     color: getColor(secondary-text);
-    border-radius: 20xp;
-    margin: 10px, 20px, 10px, 20px;
-    width: 105px;
+    border-radius: 20xp;  
+     width: 105px;
     height: 35px;
+    margin: 0;
 }
 .modal__svg{
     width:30px;
