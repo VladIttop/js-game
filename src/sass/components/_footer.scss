@@ -1,0 +1,36 @@
+.footer {
+  padding: 60px 174px;
+  &__logo {
+    width: 165px;
+    height: 70px;
+    &-form {
+      width: 347px;
+      &__input {
+        background-color: var(--input-background);
+        border-radius: 20px;
+        padding: 10px 80px 10px 10px;
+        // width: 204px;
+        // height: 35px;
+        &::placeholder {
+          @include text;
+          color: var(--input-placeholder);
+        }
+      }
+      &__btn {
+        border-radius: 20px;
+        padding: 10px;
+        // width: 107px;
+        // height: 35px;
+        background-color: var(--background-text-primary);
+        @include text;
+        color: var(--secondary-text);
+      }
+    }
+  }
+}
+.footer-contact-list {
+  @include flex(space-between, column);
+  &__link {
+    @include text;
+  }
+}
