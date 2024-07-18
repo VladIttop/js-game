@@ -1,9 +1,22 @@
+.slider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 .slider__title{
     margin: 0;
 }
+.button-previus{
+    cursor: pointer;
+    user-select: none;
+}
 .slider-list{
     display: flex;
-    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+}
+.slider-list__slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 .slider-list__box{
     width:150px;
@@ -19,4 +32,8 @@
 .slider-list__info{
     @mixin text{$fsize:12px; $lheight:normal; $fweight:400; $fstyle: normal };
     color: detColor('background-text-primary');
+}
+.button-text{
+    cursor: pointer;
+    user-select: none;
 }
