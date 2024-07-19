@@ -1,44 +1,51 @@
-.rock-paper{
+.rock-paper {
+  padding-top: 36px;
+  .inner-container {
     @include flex($direction: column);
     gap: 36px;
-    padding: 36px 277px 0 220px;
-    &__title{
-        @include text(16px);
-        color: getColor('background-text-primary');
-    }
-    &__result{
-        @include text(16px);
-        color: getColor('green-text');
-    }
-    &-computer-option{
-        @include text;
-        color: getColor('secondary-text');
-        border-radius: 20px;
-        padding: 10px 20px;
-        background-color: getColor('background-text-primary');
-    }
-    &-score__text{
-        @include text;
-        color: getColor('background-text-primary');
-    }
+  }
+  &__title {
+    @include text(16px);
+    color: var(--background-text-primary);
+  }
+  &__result {
+    @include text(16px);
+  }
+  &-computer-option__btn {
+    @include text;
+    color: var(--secondary-text);
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: var(--background-text-primary);
+  }
 }
-.rock-paper-list{
-    width: 256px;
-    @include flex(space-between); 
-    &-container{
-        width: 456px;
+.rock-paper-list {
+  width: 256px;
+  @include flex(space-between);
+  &-container {
+    width: 456px;
     @include flex(space-between);
     margin-left: 220px;
-    }
-    &__button{
-        border-radius: 20px;
-        padding: 10px;
-        width: 60px;
-        height: 60px;
-        background-color: getColor('background-text-primary');
-    }
-    &__icon{
-        width: 40px;
-        height: 40px;
-    }
+  }
+  &__button {
+    border-radius: 20px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--background-text-primary);
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.rock-paper-score__title {
+  @include text;
+  color: var(--background-text-primary);
+}
+.rock-paper-score-list {
+  &__text {
+    @include text;
+    color: var(--background-text-primary);
+  }
 }
