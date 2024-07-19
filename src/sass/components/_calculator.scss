@@ -52,10 +52,13 @@
     background-color: var(--background-text-primary);
     color: var(--secondary-text);
     &:hover{
-      border: 2px solid var(--input-background);
+          box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
     }
     &:focus{
-      border: 2px solid var(--input-placeholder);
+         box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    transform: scale(1.05);
+    outline: none; 
     }
   }
 }
