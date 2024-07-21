@@ -1,17 +1,31 @@
-const modal = document.getElementById("modal");
 
-const span = document.querySelector(".modal__close");
+document.addEventListener("DOMContentLoaded", function() {
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+  var modal = document.getElementById("modal");
+  var closeModalButton = document.querySelector(".modal__close");
+  var saveButton = document.getElementById("saveButton");
+  var userNameInput = document.getElementById("userNameInput");
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-window.onload = function() {
+  function openModal() {
     modal.style.display = "block";
   }
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  openModal();
+
+  closeModalButton.addEventListener("click", closeModal);
+
+  saveButton.addEventListener("click", function() {
+    var userName = userNameInput.value;
+    if (userName) {
+      localStorage.setItem("userName", userName); 
+      closeModal();
+      alert("Ім'я збережено: " + userName); 
+    } else {
+      alert("Будь ласка, введіть своє ім'я."); 
+    }
+  });
+});
