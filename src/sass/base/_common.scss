@@ -41,5 +41,16 @@ img {
 }
 
 .main {
-  background: url("../images/main-bg.jpg") no-repeat center center/cover;
+  background: url('../images/main-bg.jpg') no-repeat center center/cover;
+}
+
+.title {
+  // @include text(16px);
+  color: #000;
+  text-align: center;
+  margin-bottom: 36px;
+
+  .dark.title {
+    color: #fff;
+  }
 }
