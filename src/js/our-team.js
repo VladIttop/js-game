@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     const slider = document.querySelector('.slider-list');
     const slides = document.querySelectorAll('.slider-list__slide');
     const prevButton = document.querySelector('.button-previous');
@@ -33,4 +33,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     updateSliderPosition();
-});

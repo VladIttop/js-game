@@ -4,34 +4,53 @@
     overflow: hidden;
 }
 .slider__title{
-    margin: 0;
+    margin-bottom: 36px;
 }
 .button-previus{
     cursor: pointer;
     user-select: none;
 }
+.img-previous{
+    position: absolute;
+    left: 267;
+    top: 50%;
+}
+.img-next{
+    position: absolute;
+    right: 267;
+    top: 50%;   
+}
+.button-img{
+    width: 50px;
+    height: 100px;
+}
 .slider-list{
-    display: flex;
+    @include flex();
     transition: transform 0.5s ease-in-out;
+    // overflow: hidden;
 }
 .slider-list__slide {
+    margin: 0 auto;
     min-width: 100%;
     box-sizing: border-box;
+    @include flex($direction: column);
 }
 .slider-list__box{
     width:150px;
     height:150px;
-    background-color: getColor('card-background');
+    background-color: var(--card-background);
     border-radius: 20px;
 }
 .slider-list__name{
     margin-top:20px;
     margin-bottom:20px;
-    color: getColor('background-text-primary');
+    color: var(--background-text-primary);
+    text-align: center;
 }
 .slider-list__info{
     @mixin text{$fsize:12px; $lheight:normal; $fweight:400; $fstyle: normal };
-    color: detColor('background-text-primary');
+    color: var(--background-text-primary);
+    text-align: center;
 }
 .button-text{
     cursor: pointer;
