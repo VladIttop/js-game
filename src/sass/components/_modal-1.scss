@@ -7,16 +7,18 @@
     z-index: 1000;
     left: 0;
     top: 0;
+    
+    background-color: var(--secondary-text);
 
     overflow: auto;
 }
 .backdrop{
-    position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
+    position: absolute;
+//   top: 0;
+//   left: 0;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   width: 100%;
+//   height: 100%;
   z-index: 99;
 }
 .modal .inner-container{
