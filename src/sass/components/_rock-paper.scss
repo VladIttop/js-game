@@ -13,10 +13,10 @@
   }
   &-computer-option__btn {
     @include text;
-    color: var(--secondary-text);
+    color: #fff;
     border-radius: 20px;
     padding: 10px 20px;
-    background-color: var(--background-text-primary);
+    background-color: #000;
   }
 }
 .rock-paper-list {
