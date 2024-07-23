@@ -1,13 +1,23 @@
 .modal{
     width: 576px;
     height: 316px;
-    border-radius: var(--background-text-primary);
+    border-color: var(--background-text-primary);
     border-radius: 20px;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
+
     overflow: auto;
+}
+.backdrop{
+    position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
 }
 .modal .inner-container{
 position:relative;
