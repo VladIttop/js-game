@@ -11,10 +11,10 @@ function checkNumber() {
         message.textContent = 'Будь ласка, введіть число.';
         message.className = 'message_numb error';
     } else if (number === randomNumber) {
-        message.textContent = 'Вітаю, ви вгадали число! (' + number + ')';
+        message.textContent = 'Вітаю, ви вгадали число! ' + number + '!';
         message.className = 'message_numb success';
     } else {
-        message.textContent = 'Спробуйте ще раз! Число було ' + randomNumber + '.';
+        message.textContent = 'Спробуйте ще раз! Число було ' + randomNumber + '!';
         message.className = 'message_numb error';
     }
 }
