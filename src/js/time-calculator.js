@@ -1,23 +1,15 @@
-// const resultElement = document.querySelector(".calculator__time")
+const resultElement = document.querySelector(".calculator__time")
 const inputElement = document.querySelector(".calculator__wrapper--input")
 function minutesToTime() {
-  let minutes = inputElement.value;
+  let minutes = +inputElement.value;
   console.log(minutes)
   if (isNaN(minutes) || minutes < 0) {
     return "Invalid input";
   }
-
   const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
   const remainingMinutes = minutes % 60;
-  return `${hours.toString().padStart(2, '0')} годин ${remainingMinutes.toString().padStart(2, '0')} хв.`;
+  resultElement.textContent = `${days}, ${hours.toString().padStart(2, '0')} годин ${remainingMinutes.toString().padStart(2, '0')} хв.`;
 }
-
-const minutes = parseInt(prompt("Введіть число хвилин: "));
-if (isNaN(minutes)) {
-  console.log("Invalid input");
-} else {
-  const timeString = minutesToTime(minutes);
-  console.log(timeString);
-}
-const btn = document.querySelector(".calculator__form--find")
-btn.addEventListener("click", minutesToTime)
+const btnResult = document.querySelector(".calculator__wrapper--find")
+btnResult.addEventListener("click", minutesToTime)
