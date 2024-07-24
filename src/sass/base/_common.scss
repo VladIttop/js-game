@@ -14,7 +14,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+hr {
   margin: 0;
   padding: 0;
 }
@@ -55,5 +56,5 @@ img {
   height: 0px;
   stroke-width: 1px;
   stroke: #000;
-  background-color: var(--background-text-primary);
+  margin: 36px auto 0 auto;
 }
