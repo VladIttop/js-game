@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const calculatorResult = document.querySelector('.calculator__result');
 
-  let operator = ''; 
+  let operator = '';
+  let selectedButton = null;
   const add = (a, b) => a + b;
   const subtract = (a, b) => a - b;
   const multiply = (a, b) => a * b;
@@ -40,12 +41,21 @@ document.addEventListener('DOMContentLoaded', function () {
       .forEach(button => {
         button.classList.remove('calculator-operators-list__button--selected');
       });
+    operator = '';
+    selectedButton = null;
   };
 
   const selectOperator = button => {
-    deselectAllOperators();
-    button.classList.add('calculator-operators-list__button--selected');
-    operator = button.textContent.trim();
+    if (selectedButton === button) {
+      button.classList.remove('calculator-operators-list__button--selected');
+      operator = '';
+      selectedButton = null;
+    } else {
+      deselectAllOperators();
+      button.classList.add('calculator-operators-list__button--selected');
+      operator = button.textContent.trim();
+      selectedButton = button;
+    }
   };
 
   calculatorAddition.addEventListener('click', () =>
@@ -67,9 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let result;
 
     if (isNaN(firstValue) || isNaN(secondValue)) {
-      result = 'Будь ласка, введіть обидва числа.';
+      result = 'Введіть обидва числа.';
     } else if (!operator) {
-      result = 'Будь ласка, виберіть оператор.';
+      result = 'Виберіть оператор.';
     } else {
       try {
         switch (operator) {
@@ -93,7 +103,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     calculatorResult.textContent = result;
-
   });
 });
-
