@@ -60,6 +60,8 @@ input[type="number"] {
 
 .message_numb.success {
     color: var(--green-text);
+    display: flex;
+    
 }
 
 .message_numb.error {
