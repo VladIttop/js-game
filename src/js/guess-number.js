@@ -2,7 +2,7 @@ const randomNumber = Math.floor(Math.random() * 1000) + 1;
 
 function checkNumber() {
     const number = parseInt(document.getElementById('number-input').value);
-    const message = document.getElementById('message');
+    const message = document.getElementById('message_numb');
 
     console.log('Загадане число:', randomNumber);
     console.log('Введене число:', number);
