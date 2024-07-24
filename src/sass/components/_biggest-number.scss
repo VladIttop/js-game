@@ -1,0 +1,32 @@
+.number {
+    padding-top: 36px;
+
+    &__title {
+        @include text(16px);
+        margin-bottom: 36px
+    }
+
+    &__form {
+        @include flex();
+        gap: 38px;
+        width: 481px;
+        margin-bottom: 36px;
+
+        &--input {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: var(--input-background);
+            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+            outline: none;
+            border: none;
+        }
+        &::placeholder{
+            @include text();
+            color: var(--input-placeholder);
+        }
+    }
+    &__paragraph {
+        @include text();
+        color: var(--background-text-primary);
+    }
+}
