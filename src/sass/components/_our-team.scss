@@ -51,6 +51,7 @@
     @mixin text{$fsize:12px; $lheight:normal; $fweight:400; $fstyle: normal };
     color: var(--background-text-primary);
     text-align: center;
+ max-width: 400px;
 }
 .button-text{
     cursor: pointer;
