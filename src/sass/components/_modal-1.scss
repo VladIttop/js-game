@@ -36,6 +36,7 @@
   right: 30;
   position: absolute;
   color: var(--card-background);
+  background-color: var(--secondary-text);
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
@@ -53,12 +54,12 @@
 .modal-content__text {
   @mixin text {
     $fsize: 12px;
-    lheight: normal;
+    $lheight: normal;
     $fweight: 400;
     $fstyle: normal;
   }
-  width: 392px;
   height: 60px;
+  max-width: 392px;
   margin-bottom: 42px;
   display: block;
   margin-top: 30px;
@@ -68,7 +69,8 @@
 }
 .modal-content__input {
   background-color: var(--input-background);
-  color: var(--input-placeholder);
+
+  border-color: var(--input-background);
   border-radius: 20px;
   margin-top: 18px;
   margin-bottom: 18px;
@@ -82,7 +84,7 @@
   text-align: center;
   display: block;
   margin-bottom: 47px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .modal__svg {
   width: 30px;
