@@ -1,98 +1,82 @@
 .year-check {
-    &__wraper {
-        display: flex;
-    }
-
+  &__wraper {
+    display: flex;
+  }
 }
 
 .year__wraper {
-    display: flex;
+  display: flex;
 }
-
-
 
 .pop_games {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--background-text-primary);
-    @include text(24px)
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-text-primary);
+  @include text(24px);
 }
 
-
-
 #year-input {
-    padding: 10px;
-    border: none;
-    border-radius: 25px 0 0 25px;
-    background-color: var(--input-background);
-    box-shadow: 3px 3px 0px 0px #00000040;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
+  padding: 10px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background-color: var(--input-background);
+  box-shadow: 3px 3px 0px 0px #00000040;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
 }
 
 #year-input::placeholder {
-    color: var(--input-placeholder);
-    @include text();
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
+  color: var(--input-placeholder);
+  @include text();
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
 }
 
-
-
 .year {
-    padding: 0 20px;
-    background-color: var(--background-text-primary);
-    color: var(--secondary-text);
-    border: none;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    height: 40px;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    box-shadow: 3px 3px 0px 0px #00000040;
-    text-align: left;
+  padding: 0 20px;
+  background-color: var(--background-text-primary);
+  color: var(--secondary-text);
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 40px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  box-shadow: 3px 3px 0px 0px #00000040;
+  text-align: left;
 }
 
 year:hover {
-    background-color: var(--secondary-text);
+  background-color: var(--secondary-text);
 }
 
 .message {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 4px;
-    width: 100%;
-    text-align: left;
-
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
 }
 
 .message.success {
-    color: var(--green-text);
-    display: flex;
-    align-items: right;
-    margin-top: -60;
-    justify-content: right;
+  color: var(--green-text);
+  text-align: center
 }
 
 .message.error {
-    color: var(--red-text);
-    display: flex;
-    align-items: right;
-    justify-content: right;
-
+  color: var(--red-text);
+  text-align: center;
 }
 
-
-
 .year_chek {
-    @include text(16px);
-    color: var(--background-text-primary);
-    margin-bottom: 36px;
+  @include text(16px);
+  color: var(--background-text-primary);
+  margin-bottom: 36px;
 }
