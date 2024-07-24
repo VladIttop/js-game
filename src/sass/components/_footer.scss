@@ -20,6 +20,7 @@
       padding: 10px 80px 10px 10px;
       border: 1px solid var(--input-background);
       background-color: var(--input-background);
+      outline:none;
       &::placeholder {
         @include text;
         color: var(--input-placeholder);
