@@ -1,45 +1,44 @@
-.modal{
-    width: 576px;
-    height: 316px;
-    border-color: var(--background-text-primary);
-    border-radius: 20px;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--secondary-text);
-
-    overflow: auto;
+.modal {
+  width: 576px;
+  height: 316px;
+  border-color: var(--background-text-primary);
+  border-radius: 20px;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-text);
+  overflow: auto;
 }
 
-// .backdrop{
-//     position: absolute;
-//   background-color: rgba(0, 0, 0, 0.2);
-//   width: 100%;
-//   height: 100%;
-//   align-items: center;
-//   top: 50%;
-//   left: 50%;
-//   z-index:1;
-// }
-.inner-container{
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    display: flex
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-.modal .inner-container{
-position:relative;
+.inner-container {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.modal__close{
-top: 20;
-right: 30;
-    position: absolute;
-    color: var( --card-background);
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+.modal .inner-container {
+  position: relative;
+}
+.modal__close {
+  top: 20;
+  right: 30;
+  position: absolute;
+  color: var(--card-background);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .modal__close:hover,
 .modal__close:focus {
@@ -47,72 +46,67 @@ right: 30;
   text-decoration: none;
   cursor: pointer;
 }
-.modal-content{
-    width: 392px;
-    text-align: center;
+.modal-content {
+  width: 392px;
+  text-align: center;
 }
-.modal-content__text{
-    @mixin text{$fsize: 12px; lheight: normal; $fweight: 400; $fstyle: normal};
-    width: 392px;
-    height:60px;
-    margin-bottom: 42px;
-    display: block;
-    margin-top: 30px;
+.modal-content__text {
+  @mixin text {
+    $fsize: 12px;
+    lheight: normal;
+    $fweight: 400;
+    $fstyle: normal;
+  }
+  width: 392px;
+  height: 60px;
+  margin-bottom: 42px;
+  display: block;
+  margin-top: 30px;
 }
-.modal-content__name{
-    display: block;
+.modal-content__name {
+  display: block;
 }
-.modal-content__input{
-    background-color: var(--input-background);
-    color: var(--input-placeholder);
-    border-radius: 20px;
-    margin-top:18px;
-    margin-bottom: 18px;
-    width: 169px;
-    height: 35px;
-
-    
+.modal-content__input {
+  background-color: var(--input-background);
+  color: var(--input-placeholder);
+  border-radius: 20px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  width: 169px;
+  height: 35px;
 }
-.modal-content__button{
-    background-color: var(--background-text-primary);
-    color: var(--secondary-text);
-    border-radius: 20xp;  
-     width: 105px;
-    height: 35px;
-    margin: 0;
-    display: block;
-    margin-bottom: 47px;
+.modal-content__button {
+  background-color: var(--background-text-primary);
+  color: var(--secondary-text);
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin-bottom: 47px;
+  padding: 10px 20px;
 }
-.modal__svg{
-    width:30px;
-    height:30px;
-    color: getColor(background-text-primary);
+.modal__svg {
+  width: 30px;
+  height: 30px;
+  color: getColor(background-text-primary);
 }
-.sword{
-    position: absolute;
-    top:140;
-    left:41;
-}
-
-.game-development{
-    position: absolute;
-    top:220;
-    left:85;
-}
-.puzzle{
-    position: absolute;
-    top:140;
-    right:41;
-}
-.tic-tac-toe{
-    position: absolute;
-    top:220;
-    right:85;
+.sword {
+  position: absolute;
+  top: 140;
+  left: 41;
 }
 
-
-
-
-
-
-  
+.game-development {
+  position: absolute;
+  top: 220;
+  left: 85;
+}
+.puzzle {
+  position: absolute;
+  top: 140;
+  right: 41;
+}
+.tic-tac-toe {
+  position: absolute;
+  top: 220;
+  right: 85;
+}
