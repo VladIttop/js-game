@@ -1,5 +1,6 @@
 .footer {
-  padding: 60px 174px;
+  padding: 60px 0;
+  background-color: var(--secondary-text);
   .inner-container {
     @include flex;
     gap: 185px;
@@ -14,8 +15,7 @@
     column-gap: 36px;
     row-gap: 18px;
     &__input {
-      width: 204px;
-      height: 35px;
+      max-width: 204px;
       border-radius: 20px;
       padding: 10px 80px 10px 10px;
       border: 1px solid var(--input-background);
@@ -29,7 +29,7 @@
       @include text;
       border-radius: 20px;
       padding: 10px;
-      background-color: var(--background-text-primary);
+      background-color: #000;
       color: var(--secondary-text);
     }
     &__text{
