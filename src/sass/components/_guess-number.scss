@@ -15,21 +15,21 @@
     align-items: center;
     border-radius: 25px;
     overflow: hidden;
-    background-color: #f0f0f0;
+    background-color: var(--input-background);
 }
 
-input[type="number"] {
+#number-input {
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 25px 0 0 25px;
     width: 150px;
-    background-color: #f0f0f0;
+    background-color: var(--input-background);
     height: 35px;
     box-shadow: 3px 3px 0px 0px #00000040;
 }
 
-.year {
+.guess {
     padding: 0 20px;
     font-size: 16px;
     background-color: var(--background-text-primary);
@@ -46,7 +46,7 @@ input[type="number"] {
     
 }
 
-.year:hover {
+.guess:hover {
     background-color: var(--background-primary);
 }
 
@@ -61,7 +61,7 @@ input[type="number"] {
 .message_numb.success {
     color: var(--green-text);
     display: flex;
-    
+
 }
 
 .message_numb.error {
