@@ -10,6 +10,7 @@
   transform: translate(-50%, -50%);
   background-color: var(--secondary-text);
   overflow: auto;
+  padding: 46px 92px;
 }
 
 .backdrop {
@@ -59,9 +60,7 @@
     $fstyle: normal;
   }
  text-align:center;
-  margin-bottom: 42px;
   display: block;
-  margin-top: 30px;
 }
 .modal-content__name {
   display: block;
