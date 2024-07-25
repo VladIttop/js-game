@@ -2,14 +2,13 @@
   width: 576px;
   height: 316px;
   border-color: var(--background-text-primary);
-  border-radius: 20px;
   position: fixed;
+  border-radius: 20px;
   z-index: 1001;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--secondary-text);
-  overflow: auto;
 }
 
 .backdrop {
@@ -23,10 +22,8 @@
   z-index: 1000;
 }
 .inner-container {
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  @include flex($direction: column);
+  border-radius: 20px;
 }
 .modal .inner-container {
   position: relative;
@@ -52,13 +49,8 @@
   text-align: center;
 }
 .modal-content__text {
-  @mixin text {
-    $fsize: 12px;
-    $lheight: normal;
-    $fweight: 400;
-    $fstyle: normal;
-  }
- text-align:center;
+  @include text();
+  text-align: center;
   margin-bottom: 42px;
   display: block;
   margin-top: 30px;
@@ -68,7 +60,7 @@
 }
 .modal-content__input {
   background-color: var(--input-background);
-
+  outline: none;
   border-color: var(--input-background);
   border-radius: 20px;
   margin-top: 18px;
