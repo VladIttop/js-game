@@ -1,10 +1,11 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-  const choices = ['rock', 'paper', 'scissors'];
+  const choices = ['stone', 'paper', 'scissors'];
   let userChoice = '';
   let computerChoice = '';
 
   const userButtons = document.querySelectorAll('.rock-paper-list__button');
-  const resultDisplay = document.querySelector('.rock-paper__result');
+  const resultText = document.querySelector('.rock-paper__result');
   const userScoreSpan = document.querySelector(
     '.rock-paper-list__span--person'
   );
@@ -28,15 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'Нічия!';
     }
     if (
-      (userChoice === 'rock' && computerChoice === 'scissors') ||
+      (userChoice === 'stone' && computerChoice === 'scissors') ||
       (userChoice === 'scissors' && computerChoice === 'paper') ||
-      (userChoice === 'paper' && computerChoice === 'rock')
+      (userChoice === 'paper' && computerChoice === 'stone')
     ) {
       userScore++;
-      return 'Ви виграли!';
+      return 'Ви виграли раунд!';
     } else {
       computerScore++;
-      return 'Комп’ютер виграв!';
+      return 'Комп’ютер виграв раунд!';
     }
   }
 
@@ -45,32 +46,80 @@ document.addEventListener('DOMContentLoaded', () => {
     computerScoreSpan.textContent = computerScore;
   }
 
-  function updateComputerOptionButton(computerChoice) {
-    const choiceText = {
-      rock: 'Камінь',
-      paper: 'Папір',
-      scissors: 'Ножиці',
-    };
-    computerOptionButton.textContent = `Комп’ютер вибрав ${choiceText[computerChoice]}`;
+  function resetButtonClasses() {
+    userButtons.forEach(button => {
+      button.classList.remove(
+        'rock-paper-list__button--red',
+        'rock-paper-list__button--grey',
+        'rock-paper-list__button--computer',
+        'rock-paper-list__button--draw',
+        'rock-paper-list__button--person'
+      );
+    });
+  }
+
+  function resetResultClasses() {
+    resultText.classList.remove(
+      'rock-paper__result--grey',
+      'rock-paper__result--red',
+      'rock-paper__result--green'
+    );
+  }
+
+  function applyButtonClasses(computerChoice, result) {
+    const computerButton = Array.from(userButtons).find(
+      button => button.querySelector('img').alt === computerChoice
+    );
+    const userButton = Array.from(userButtons).find(
+      button => button.querySelector('img').alt === userChoice
+    );
+
+    if (result === 'Нічия!') {
+      computerButton.classList.add('rock-paper-list__button--draw');
+      userButton.classList.remove('rock-paper-list__button--person');
+    } else {
+      computerButton.classList.add('rock-paper-list__button--computer');
+    }
+  }
+
+  function updateResultText(result) {
+    resetResultClasses();
+    if (result === 'Нічия!') {
+      resultText.textContent = result;
+      resultText.classList.add('rock-paper__result--grey');
+    } else if (result === 'Комп’ютер виграв раунд!') {
+      resultText.textContent = result;
+      resultText.classList.add('rock-paper__result--red');
+    } else if (result === 'Ви виграли раунд!') {
+      resultText.textContent = result;
+      resultText.classList.add('rock-paper__result--green');
+    }
   }
 
   userButtons.forEach(button => {
     button.addEventListener('click', () => {
-      userChoice = button.dataset.choice; 
-      computerChoice = getComputerChoice(); 
-        updateComputerOptionButton(computerChoice);
-      resultDisplay.textContent = '';
+      resetButtonClasses();
+      userChoice = button.querySelector('img').alt;
+      button.classList.add('rock-paper-list__button--person');
+      resultText.textContent = '';
     });
   });
 
   computerOptionButton.addEventListener('click', () => {
     if (userChoice) {
+      computerChoice = getComputerChoice();
       const result = determineWinner(userChoice, computerChoice);
-      resultDisplay.textContent = `Комп’ютер вибрав ${computerChoice}. ${result}`;
+      applyButtonClasses(computerChoice, result);
+      updateResultText(result);
       updateScore();
       userChoice = '';
     } else {
-      computerOptionButton.textContent = 'Спочатку виберіть свій варіант!';
+      resultText.textContent = 'Спочатку виберіть свій варіант!';
+      resultText.classList.remove(
+        'rock-paper__result--grey',
+        'rock-paper__result--red',
+        'rock-paper__result--green'
+      );
     }
   });
 });
