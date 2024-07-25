@@ -16,7 +16,7 @@
   width: 720px;
   height: 220px;
   border-radius: 37px;
-  border: 2px solid getColor('background-text-primary');
+  border: 2px solid var(--background-text-primary);
   background-color: #5abb58;
   cursor: url("../images/cursor.svg"), pointer;
   overflow: hidden;

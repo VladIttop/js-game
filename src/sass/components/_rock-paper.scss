@@ -1,0 +1,72 @@
+.rock-paper {
+  padding-top: 36px;
+  .inner-container {
+    @include flex($direction: column);
+    gap: 36px;
+  }
+  &__title {
+    @include text(16px);
+    color: var(--background-text-primary);
+  }
+  &__result {
+    @include text(16px);
+  }
+  &-computer-option__btn {
+    @include text;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+  }
+}
+.rock-paper-list {
+  width: 256px;
+  @include flex(space-between);
+  &-container {
+    width: 456px;
+    @include flex(space-between);
+    margin-left: 220px;
+  }
+  &__button {
+    border-radius: 20px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    // &:hover{
+    //     box-shadow: var(--box-shadow);
+    // }
+    // &:focus{
+    //     border: 2px dashed var(--input-background);
+    // }
+// &:hover,
+// &:focus {
+//     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+//     transform: scale(1.1);
+//     outline: none; /* Видаляє рамку при фокусі */
+// }
+&:hover {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+&:focus {
+    box-shadow: 0 0 20px  rgba(0, 123, 255, 0.6);
+    transform: scale(1.05);
+    outline: none; 
+}
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.rock-paper-score__title {
+  @include text;
+  color: var(--background-text-primary);
+}
+.rock-paper-score-list {
+  &__text {
+    @include text;
+    color: var(--background-text-primary);
+  }
+}

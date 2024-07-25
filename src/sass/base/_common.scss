@@ -3,30 +3,37 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: 'Montserrat Alternates', sans-serif;
 }
+
 ul,
 p,
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+hr {
   margin: 0;
   padding: 0;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 button {
   display: block;
   border: none;
   cursor: pointer;
 }
+
 img {
   display: block;
   width: 100%;
@@ -43,3 +50,12 @@ img {
 .main {
   background: url("../images/main-bg.png") no-repeat center center/cover;
 }
+
+.border {
+  width: 536px;
+  height: 0px;
+  stroke-width: 1px;
+  stroke: #000;
+  margin: 36px auto 0 auto;
+}
+

@@ -16,13 +16,14 @@
   column-gap: 36px;
   margin-bottom: 36px;
   max-width: 577px;
+  height: 418px;
 
   &__item {
     @include flex($direction: column);
     width: 100px;
     height: 100px;
     border-radius: 20px;
-    background-color: #d9d9d9;
+    background-color: var(--card-background);
   }
 }
 
@@ -40,6 +41,11 @@
     box-shadow: 3px 3px 0px 0px getColor('box-shadow');
     cursor: pointer;
     color: #fff;
+    background-color: var(--background-text-primary);
+    box-shadow: 3px 3px 0px 0px getColor('box-shadow');
+    cursor: pointer;
+    color: var(--secondary-text);
+
     @include text();
   }
 }
@@ -48,7 +54,7 @@
 #birthYear,
 .scientist-list__item,
 #deathYear {
-  color: getColor('background-text-primary');
+  color: var(--background-text-primary);
   @include text(8px, 14px);
 }
 
