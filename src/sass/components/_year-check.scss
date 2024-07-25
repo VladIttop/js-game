@@ -1,12 +1,14 @@
-.year-check {
+.year {
   &__wraper {
     display: flex;
+    width: 215px;
   }
 }
 
 
-.year__wraper {
+.year_content {
   display: flex;
+  justify-content: space-between;
 }
 
 .pop_games {
@@ -46,6 +48,7 @@
 .message {
   margin-top: 20px;
   text-align: center;
+  width: 330px;
 }
 
 .message.success {
