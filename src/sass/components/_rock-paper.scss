@@ -10,6 +10,7 @@
   }
   &__result {
     @include text;
+    height: 15px;
     &--red {
       color: var(--red-text);
     }
