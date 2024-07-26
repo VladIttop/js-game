@@ -9,6 +9,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--secondary-text);
+  overflow: auto;
+  padding: 46px 92px;
 }
 
 .backdrop {
@@ -21,13 +23,14 @@
   left: 0;
   z-index: 1000;
 }
+
 .inner-container {
   @include flex($direction: column);
   border-radius: 20px;
 }
-.modal .inner-container {
-  position: relative;
-}
+
+
+
 .modal__close {
   top: 20;
   right: 30;
@@ -38,50 +41,75 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 .modal__close:hover,
 .modal__close:focus {
   color: var(--background-text-primary);
   text-decoration: none;
   cursor: pointer;
 }
+
 .modal-content {
-  width: 392px;
+
   text-align: center;
 }
+
 .modal-content__text {
   @include text();
   text-align: center;
   margin-bottom: 42px;
+  font-family: "Inter", sans-serif;
+  @include text($fsize: 12px,
+    $lheight: normal,
+    $fweight: 400,
+    $fstyle: normal,
+  );
+  text-align: center;
   display: block;
-  margin-top: 30px;
 }
+
 .modal-content__name {
   display: block;
+  font-family: "Inter", sans-serif;
+  margin-top: 42px;
+  @include text($fsize: 12px,
+    $lheight: normal,
+    $fweight: 400,
+    $fstyle: normal,
+  );
 }
+
 .modal-content__input {
   background-color: var(--input-background);
   outline: none;
+  border: none;
   border-color: var(--input-background);
   border-radius: 20px;
   margin-top: 18px;
   margin-bottom: 18px;
   width: 169px;
   height: 35px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7e7e7e;
 }
+
 .modal-content__button {
   background-color: var(--background-text-primary);
   color: var(--secondary-text);
   border-radius: 20px;
   text-align: center;
   display: block;
-  margin-bottom: 47px;
   padding: 10px 20px 10px 20px;
 }
+
 .modal__svg {
   width: 30px;
   height: 30px;
   color: getColor(background-text-primary);
 }
+
 .sword {
   position: absolute;
   top: 140;
@@ -93,11 +121,13 @@
   top: 220;
   left: 85;
 }
+
 .puzzle {
   position: absolute;
   top: 140;
   right: 41;
 }
+
 .tic-tac-toe {
   position: absolute;
   top: 220;
