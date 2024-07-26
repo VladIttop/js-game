@@ -7,13 +7,11 @@ let currentIndex = 0;
 function updateSliderPosition() {
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-function updateSliderPosition1() {
-  slider.style.transform = `translateX(${currentIndex * 100}%)`;
-}
+
 prevButton.addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
-    updateSliderPosition1();
+    updateSliderPosition();
   }
 });
 
