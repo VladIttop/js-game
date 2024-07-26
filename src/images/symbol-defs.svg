@@ -2,7 +2,7 @@
     <defs>
         <!-- Arrow-down -->
         <symbol id="arrow-down" width="11" height="7">
-            <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"
+            <path stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"
                 d="M10 1 5.5 6 1 1" />
         </symbol>
 

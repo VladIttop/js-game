@@ -16,6 +16,7 @@
   column-gap: 36px;
   margin-bottom: 36px;
   max-width: 577px;
+  height: 418px;
 
   &__item {
     @include flex($direction: column);
@@ -36,10 +37,15 @@
   &__btn {
     padding: 10px 20px;
     border-radius: 20px;
+    background-color: #000;
+    box-shadow: 3px 3px 0px 0px getColor('box-shadow');
+    cursor: pointer;
+    color: #fff;
     background-color: var(--background-text-primary);
     box-shadow: 3px 3px 0px 0px getColor('box-shadow');
     cursor: pointer;
     color: var(--secondary-text);
+
     @include text();
   }
 }

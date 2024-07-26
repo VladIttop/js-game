@@ -1,0 +1,49 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--secondary-text);
+  .inner-container {
+    @include flex;
+    gap: 185px;
+  }
+  &__logo {
+    width: 165px;
+    height: 70px;
+  }
+  &-form {
+    @include flex(flex-start,$wrap: wrap);
+    width: 347px;
+    column-gap: 36px;
+    row-gap: 18px;
+    &__input {
+      max-width: 204px;
+      border-radius: 20px;
+      padding: 10px 80px 10px 10px;
+      border: 1px solid var(--input-background);
+      background-color: var(--input-background);
+      outline:none;
+      &::placeholder {
+        @include text;
+        color: var(--input-placeholder);
+      }
+    }
+    &__btn {
+      @include text;
+      border-radius: 20px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+    }
+    &__text{
+      @include text(6px);
+      text-align: left;
+      color: var(--background-text-primary)
+    }
+  }
+}
+.footer-contact-list {
+  @include flex(space-between, column, left);
+  &__link {
+    @include text;
+    color: var(--background-text-primary);
+  }
+}

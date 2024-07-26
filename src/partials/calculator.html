@@ -1,18 +1,59 @@
 <section class="calculator section" id="calculator">
   <div class="inner-container">
-  <h5 class="calculator__title">Калькулятор</h5>
-  <input type="number" class="calculator__number--first" placeholder="Введіть число"/>
-  <ul class="calculator-operators-list">
-    <li class="calculator-operators-list__item"><button class="calculator-operators-list__button" type="button">+</button></li>
-    <li class="calculator-operators-list__item"><button class="calculator-operators-list__button" type="button">*</button></li>
-    <li class="calculator-operators-list__item"><button class="calculator-operators-list__button" type="button">-</button></li>
-    <li class="calculator-operators-list__item"><button class="calculator-operators-list__button" type="button">/</button></li>
-  </ul>
-  <input type="number" class="calculator__number--second" placeholder="Введіть число"/>
-  <button class="calculator-result__button" type="button">=</button>
-  <div class="result-container">
-    <p class="calculator__result">Результат</p>
-  </div>
-  <div class="border"></div>
+    <h5 class="calculator__title">Калькулятор</h5>
+    <div class="calculator-flex-container">
+      <input
+        class="calculator__input calculator__input--first"
+        placeholder="Введіть число"
+      />
+      <ul class="calculator-operators-list">
+        <li class="calculator-operators-list__item">
+          <button
+            class="calculator-operators-list__button calculator-operators-list__button--addition"
+            type="button"
+          >
+            +
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button
+            class="calculator-operators-list__button calculator-operators-list__button--multiplication"
+            type="button"
+          >
+            *
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button
+            class="calculator-operators-list__button calculator-operators-list__button--substraction"
+            type="button"
+          >
+            -
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button
+            class="calculator-operators-list__button calculator-operators-list__button--division"
+            type="button"
+          >
+            /
+          </button>
+        </li>
+      </ul>
+      <input
+        class="calculator__input calculator__input--second"
+        placeholder="Введіть число"
+      />
+      <button
+        class="calculator-result__button"
+        type="button"
+      >
+        =
+      </button>
+      <div class="calculator-result-container">
+        <p class="calculator__result">Результат</p>
+      </div>
+    </div>
+    <div class="border"></div>
   </div>
 </section>
