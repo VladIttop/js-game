@@ -33,7 +33,7 @@ let isAlive = setInterval(function() {
 function stopGame() {
   const gameOverMessage = document.createElement('div');
   gameOverMessage.className = 'game-over-message';
-  gameOverMessage.textContent = 'Game Over!';
+  gameOverMessage.textContent = 'Гра Закінчена!';
   container.appendChild(gameOverMessage);
   dino.style.animation = 'none';
   cactus.style.animation = 'none';
