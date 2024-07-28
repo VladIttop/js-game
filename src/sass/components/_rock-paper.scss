@@ -9,7 +9,17 @@
     color: var(--background-text-primary);
   }
   &__result {
-    @include text(16px);
+    @include text;
+    height: 15px;
+    &--red {
+      color: var(--red-text);
+    }
+    &--grey{
+      color: var(--input-placeholder);
+    }
+    &--green {
+      color: var(--green-text);
+    }
   }
   &-computer-option__btn {
     @include text;
@@ -30,30 +40,23 @@
   &__button {
     border-radius: 20px;
     padding: 10px;
-    width: 60px;
-    height: 60px;
     background-color: #000;
-    // &:hover{
-    //     box-shadow: var(--box-shadow);
-    // }
-    // &:focus{
-    //     border: 2px dashed var(--input-background);
-    // }
-// &:hover,
-// &:focus {
-//     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-//     transform: scale(1.1);
-//     outline: none; /* Видаляє рамку при фокусі */
-// }
-&:hover {
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
-&:focus {
-    box-shadow: 0 0 20px  rgba(0, 123, 255, 0.6);
-    transform: scale(1.05);
-    outline: none; 
-}
+    &--computer {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px var(--red-text);
+    }
+    &--draw{
+          transform: scale(1.05);
+      box-shadow: 0 0 20px var(--input-placeholder);
+    }
+    &:hover {
+      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+    &--person {
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+      transform: scale(1.05);
+    }
   }
   &__icon {
     width: 40px;

@@ -28,6 +28,19 @@
     .dark &:hover {
       color: #1b1313;
     }
+    &:hover {
+      color: #808080;
+    }
+  }
+}
+
+.drop-menu__btn {
+  stroke: #000;
+}
+
+.dark .drop-menu__btn {
+  svg {
+    stroke: #fff;
   }
 }
 
@@ -72,11 +85,6 @@
   margin-right: 50px;
   background-color: var(--secondary-text);
 
-  &__img {
-    display: inline-block;
-    width: 12px;
-    height: 7px;
-  }
   &__btn {
     position: relative;
     color: var(--background-text-primary);
@@ -87,6 +95,13 @@
     .dark &:hover {
       color: #1b1313;
     }
+    &:hover {
+      color: #808080;
+    }
+  }
+
+  &__img {
+    transition: transform 0.3s linear;
   }
 }
 
@@ -117,7 +132,7 @@
   &__item:hover {
     background-color: #f1f1f1;
   }
-  .dark &__item:hover .dropdown-menu__link{
+  .dark &__item:hover .dropdown-menu__link {
     color: var(--secondary-text);
   }
   &__item:nth-child(4) {
@@ -131,7 +146,7 @@
   }
 }
 
-.dropdown-menu.is-open{
+.dropdown-menu.is-open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -142,5 +157,5 @@
 }
 
 .header-right-btn-div.clicked {
-background-color: #000;
+  background-color: #000;
 }
