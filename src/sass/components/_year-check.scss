@@ -1,14 +1,14 @@
 .year {
   &__wraper {
     display: flex;
-    width: 215px;
+    min-width: 215px;
   }
 }
-
 
 .year_content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .pop_games {
@@ -18,13 +18,12 @@
 }
 
 #year-input {
-  padding: 10px;
   border: none;
   border-radius: 25px 0 0 25px;
   background-color: var(--input-background);
   box-shadow: 3px 3px 0px 0px #00000040;
-  @include flex();
   outline: none;
+  padding-left: 10px;
 }
 
 #year-input::placeholder {
@@ -45,24 +44,25 @@
   box-shadow: 3px 3px 0px 0px #00000040;
 }
 
-.message {
-  margin-top: 20px;
-  text-align: center;
-  width: 330px;
-}
-
 .message.success {
   color: var(--green-text);
-  text-align: center;
+  margin-left: 130px;
 }
 
 .message.error {
   color: var(--red-text);
-  text-align: center;
+  margin-left: 149;
+
 }
 
 .year_chek {
   @include text(16px);
   color: var(--background-text-primary);
   margin-bottom: 36px;
+}
+
+#year-input::-webkit-outer-spin-button,
+#year-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
