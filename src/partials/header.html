@@ -25,33 +25,48 @@
             </ul>
       <div class="drop-down">
         <div class="drop-menu">
-          <a href="#" class="drop-menu__text clickText">
+          <button class="drop-menu__btn clickText" type="button">
             Інтерактив
-            <img
-              class="drop-menu__img"
-              src="./images/arrow-down.svg"
-              alt="arrow-down"
-            />
-          </a>
+            <svg
+            class="drop-menu__img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="11"
+              height="7"
+              fill="none"
+            >
+              <path
+                stroke="inherit"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width=".75"
+                d="M10 1 5.5 6 1 1"
+              />
+            </svg>
+          </button>
         </div>
         <ul class="dropdown-menu">
-          <li class="dropdown-menu__item">
-            <a href="#" class="dropdown-menu__link">Числовий</a>
+          <li class="dropdown-menu__item" id="numerical">
+            <a href="" class="dropdown-menu__link">Числовий</a>
+          </li>
+          <li class="dropdown-menu__item" id="game">
+            <a href="" class="dropdown-menu__link">Ігровий</a>
           </li>
           <li class="dropdown-menu__item">
-            <a href="#" class="dropdown-menu__link">Ігровий</a>
+            <a href="" class="dropdown-menu__link" id="acquaintance"
+              >Ознайомчий</a
+            >
           </li>
-          <li class="dropdown-menu__item">
-            <a href="#" class="dropdown-menu__link">Ознайомчий</a>
+          <li class="dropdown-menu__item" id="showSections">
+            <a href="" class="dropdown-menu__link">Всі секції</a>
           </li>
         </ul>
       </div>
       <ul class="header-list">
         <li>
-          <a href="#" class="header-list__link">Наша команда</a>
+          <a href="" class="header-list__link">Наша команда</a>
         </li>
         <li>
-          <a href="#" class="header-list__link">Контакти</a>
+          <a href="" class="header-list__link">Контакти</a>
         </li>
       </ul>
     </div>
@@ -61,7 +76,12 @@
           <img
             src="./images/light.svg"
             alt=""
-            class="header-right-btn-div__img"
+            class="header-right-btn-div__img img1"
+          />
+          <img
+            class="header-right-btn-div__img img2"
+            src="./images/dark.svg"
+            alt="dark svg"
           />
         </div>
       </button>
