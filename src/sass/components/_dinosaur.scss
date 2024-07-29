@@ -6,36 +6,33 @@
   text-align: center;
 
   &__container{
-    width: 100%;
-    background: url("../images/ground.png");
+    position: relative;
+    width: 720px;
+    height: 241px;
+    margin: 0 auto;
+
+    background: url("../images/ground.png")  13px 166px repeat-x;
   }
   &__dino {
-    position: absolute;
-    bottom: 0;
-    left: 50px;
     width: 50px;
     height: 50px;
-    transition: bottom 0.3s linear;
-    animation-name: dino;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    position: absolute;
+    bottom: 72px;
+    left: 20px;
   }
 
   &__cactus {
 
+    width: 50px;
     position: absolute;
-    bottom: 0;
-    right:750;
-    width: 30px;
-    height: 50px;
+    right: 0;
+    bottom: 72px;
   }
   &__ground {
-    width: 135px;
+    width: 100%;
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 20px;
+    margin-bottom: 36px;
   }
   &__points{
     position: absolute;
