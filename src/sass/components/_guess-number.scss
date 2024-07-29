@@ -1,16 +1,13 @@
 .guess-number {
-  @include flex($direction: column);
   padding-top: 36px;
 }
-.guess-number {
+.guess-number-title {
   color: var(--background-text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   @include text(16px);
+  text-align: center;
 }
 
-.inner-container {
-  @include flex();
-}
 
 .input-container {
   @include flex(left, $align: left);
@@ -46,14 +43,25 @@
 }
 
 .message_numb {
-  margin-top: 20px;
-  text-align: center;
+  @include text();
 }
 
 .message_numb.success {
   color: var(--green-text);
+  margin-left: 202px;
 }
 
 .message_numb.error {
   color: var(--red-text);
+  margin-left: 151px;
+}
+
+.guess-number-content {
+  @include flex();
+}
+
+#year-input::-webkit-outer-spin-button,
+#year-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
