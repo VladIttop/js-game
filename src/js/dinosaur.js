@@ -2,13 +2,10 @@ const dino = document.querySelector('.dinosaur__dino');
 const container = document.querySelector('.dinosaur__container');
 const pointsToShow = document.querySelector('.dinosaur__points');
 const cactus = document.querySelector(".dinosaur__cactus");
+const gameOverMessage = document.getElementById("gameOverMessage")
 let points = 0;
 
-
 const startGame = () => {
-  points = 0;
-
-  // pointsToShow.textContent = points;
   cactus.classList.add('cactus__animation');
 
   setInterval(function () {
@@ -41,30 +38,18 @@ const jump = function () {
 document.addEventListener('keydown', (e) => {
   e.preventDefault();
 
-  if (e.code === 'Space') {
+  if (e.code === 'Space' || e.code === "keyup") {
     startGame();
+    jump();
   }
 });
 container.addEventListener('click', () => {
-
+  startGame();
   jump();
-
 });
 
-
-
-
 function stopGame() {
-  // const gameOverMessage = document.createElement('div');
-  cactus.classList.remove('cactus__animation');
-
-  // gameOverMessage.className = 'game-over-message';
-  // gameOverMessage.innerHTML = 'Гра Закінчена!';
-  // container.appendChild(gameOverMessage);
-  // dino.style.animation = 'none';
-  // cactus.style.animation = 'none';
-  points = 0;
-
-
-
+  gameOverMessage.classList.add("showMessage")
+  dino.style.animation = 'none';
+  cactus.style.animation = 'none';
 }
