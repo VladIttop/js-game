@@ -25,13 +25,16 @@
   position: absolute;
   right: 0;
   top: 200;
-  animation: cactusAnimation 2s infinite linear;
+  // animation: cactusAnimation 2s infinite linear;
 }
 
 .dinosaur__points {
   position: absolute; 
   top: 10;
   right: 10;
+}
+.cactus__animation {
+  animation: cactusAnimation 2s infinite linear;
 }
 
 
@@ -65,4 +68,5 @@
 .game-over-message {
   text-align: center;
   font-size: 24px;
+  opacity: 0;
 }
