@@ -24,4 +24,4 @@ nextButton.addEventListener('click', () => {
   }
 });
 
-updateSliderPosition();
+// updateSliderPosition();
