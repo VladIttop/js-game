@@ -3,18 +3,22 @@ const timeCalculator = document.getElementById('time-calculator');
 const biggestNumber = document.getElementById('biggest-number');
 const rockPaper = document.getElementById('rock-paper');
 const dinosaur = document.getElementById('dinosaur');
-
+const yearCheck = document.getElementById('year-check');
+const guessNumber = document.getElementById('guess-number');
+const football = document.getElementById('football');
+const slider = document.getElementById('slider');
+const scientist = document.getElementById('scientist');
 const games = [
-  // {
-  //   id: document.querySelector('#year-check'),
-  //   name: 'Високосний калькулятор',
-  //   category: 'numerical',
-  // },
-  // {
-  //   id: document.getElementById('guess-number'),
-  //   name: 'Вгадай число',
-  //   category: 'numerical',
-  // },
+  {
+    id: yearCheck,
+    name: 'Високосний калькулятор',
+    category: 'numerical',
+  },
+  {
+    id: document.getElementById('guess-number'),
+    name: 'Вгадай число',
+    category: 'numerical',
+  },
   {
     id: rockPaper,
     name: 'Камінь-Ножиці-Папір',
@@ -35,26 +39,26 @@ const games = [
     name: 'Google динозаврик',
     category: 'game',
   },
-  //  {
-  //   id: 7,
-  //   name: 'Футбол',
-  //   category: 'game',
-  // },
+  {
+    id: football,
+    name: 'Футбол',
+    category: 'game',
+  },
   {
     id: biggestNumber,
     name: 'Найбільше число',
     category: 'numerical',
   },
-  // {
-  //   id: 9,
-  //   name: 'Наша команда',
-  //   category: 'acquaintance',
-  // },
-  // {
-  //   id: 10,
-  //   name: 'Вчений',
-  //   category: 'acquaintance',
-  // },
+  {
+    id: slider,
+    name: 'Наша команда',
+    category: 'acquaintance',
+  },
+  {
+    id: scientist,
+    name: 'Вчений',
+    category: 'acquaintance',
+  },
 ];
 
 const allSections = document.querySelectorAll('section');
@@ -85,14 +89,15 @@ game.addEventListener('click', () => {
   gameGames.forEach(game => {
     game.id.style.display = 'block';
   });
+  console.log('e');
 });
 
-const showSections = document.getElementById("showSections");
-showSections.addEventListener("click", () => {
-allSections.forEach(section => {
-  section.style.display = "block";
-})
-})
+const showSections = document.getElementById('showSections');
+showSections.addEventListener('click', () => {
+  allSections.forEach(section => {
+    section.style.display = 'block';
+  });
+});
 
 const clickText = document.querySelector('.clickText');
 const dropMenu = document.querySelector('.dropdown-menu');
