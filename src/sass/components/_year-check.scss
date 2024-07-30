@@ -1,9 +1,8 @@
-.year {
-  &__wraper {
+.year__wraper {
     display: flex;
     min-width: 215px;
   }
-}
+
 
 .year_content {
 @include flex(space-between);
@@ -31,7 +30,7 @@
 
 .year {
   padding: 0 20px;
-  background-color: var(--background-text-primary);
+  background-color: #000;
   color: var(--secondary-text);
   border: none;
   border-radius: 0 25px 25px 0;

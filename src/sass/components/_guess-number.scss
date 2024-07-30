@@ -8,9 +8,13 @@
   text-align: center;
 }
 
+.guess-number-content {
+  @include flex(left, $align: center);
+  width: 100%;
+}
 
 .input-container {
-  @include flex(left, $align: left);
+  @include flex(center, $align: center);
   border-radius: 25px;
   background-color: var(--input-background);
 }
@@ -32,8 +36,7 @@
 
 .guess {
   padding: 12px;
-  background-color: var(--background-text-primary);
-  color: var(--secondary-text);
+  background-color: #000;
   border: none;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
