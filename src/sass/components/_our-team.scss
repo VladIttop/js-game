@@ -6,19 +6,17 @@
 .slider__title{
     margin-bottom: 36px;
 }
-.button-previus{
+.button-previous{
     cursor: pointer;
     user-select: none;
-}
-.img-previous{
-    position: absolute;
-    left: 92;
+    position:absolute;
     top: 50%;
+    left: 92px;
 }
-.img-next{
-    position: absolute;
-    right: 92;
-    top: 50%;   
+.button-next{
+    position:absolute;
+    top: 50%;
+    right: 92px;
 }
 .button-img{
     width: 50px;
