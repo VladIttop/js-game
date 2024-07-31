@@ -5,7 +5,7 @@ const nextButton = document.querySelector('.button-next');
 let currentIndex = 0;
 
 function updateSliderPosition() {
-  const offset = currentIndex * 630
+  const offset = currentIndex * 610
   slider.style.transform = `translateX(-${offset}px)`;
 }
 

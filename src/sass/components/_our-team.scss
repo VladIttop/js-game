@@ -1,7 +1,8 @@
 .slider{
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
+    margin: 0 auto;
 }
 .slider__title{
     margin-bottom: 36px;
@@ -30,7 +31,8 @@
     @include flex( $justify: none);
     transition: transform 0.5s ease-in-out;
     width:315px;
-    gap:300px;
+    // overflow: hidden;
+    gap:295px;
 }
 .slider-list__slide {
     margin: 0 auto;
