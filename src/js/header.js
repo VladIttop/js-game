@@ -78,7 +78,9 @@ numerical.addEventListener('click', () => {
     section.style.display = 'none';
   });
   numericalGames.forEach(game => {
-    game.id.style.display = 'block';
+    if (game.id) {
+      game.id.style.display = 'block';
+    }
   });
 });
 
@@ -87,7 +89,21 @@ game.addEventListener('click', () => {
     section.style.display = 'none';
   });
   gameGames.forEach(game => {
-    game.id.style.display = 'block';
+    if (game.id) {
+      game.id.style.display = 'block';
+    }
+  });
+  console.log('e');
+});
+
+acquaintance.addEventListener('click', () => {
+  allSections.forEach(section => {
+    section.style.display = 'none';
+  });
+  acquaintanceGames.forEach(game => {
+    if (game.id) {
+      game.id.style.display = 'block';
+    }
   });
   console.log('e');
 });
@@ -112,11 +128,6 @@ const btnDiv = document.querySelector('.header-right-btn-div');
 const img1 = document.querySelector('.header-right-btn-div__img.img1');
 const img2 = document.querySelector('.header-right-btn-div__img.img2');
 const link = document.querySelectorAll('a');
-link.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-  });
-});
 btn.addEventListener('click', () => {
   if (img1.style.display !== 'none') {
     img1.style.display = 'none';
