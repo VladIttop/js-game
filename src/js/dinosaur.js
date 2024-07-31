@@ -10,11 +10,8 @@ const startGame = () => {
 
   setInterval(function () {
     pointsToShow.textContent = points;
-
     points++;
   }, 100);
-
-  console.log('game started');
 
   setInterval(function () {
     const dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
@@ -52,4 +49,5 @@ function stopGame() {
   gameOverMessage.classList.add("showMessage")
   dino.style.animation = 'none';
   cactus.style.animation = 'none';
+  points = 0;
 }
