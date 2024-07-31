@@ -1,30 +1,43 @@
 const dino = document.querySelector('.dinosaur__dino');
 const container = document.querySelector('.dinosaur__container');
 const pointsToShow = document.querySelector('.dinosaur__points');
-const cactus = document.querySelector(".dinosaur__cactus");
-const gameOverMessage = document.getElementById("gameOverMessage")
+const cactus = document.querySelector('.dinosaur__cactus');
+const gameOverMessage = document.getElementById('gameOverMessage');
+const resetGame = document.getElementById('startOver');
 let points = 0;
+let gameInterval;
+let checkCollisionInterval;
 
 const startGame = () => {
+  points = 0;
+  pointsToShow.textContent = points;
+  gameOverMessage.classList.remove('showMessage');
   cactus.classList.add('cactus__animation');
+  dino.style.animation = "";
+  cactus.style.animation = "";
 
-  setInterval(function () {
+  gameInterval = setInterval(function () {
     pointsToShow.textContent = points;
     points++;
   }, 100);
 
-  setInterval(function () {
-    const dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
-    const cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
+
+  checkCollisionInterval = setInterval(function () {
+    const dinoTop = parseInt(
+      window.getComputedStyle(dino).getPropertyValue('top')
+    );
+    const cactusLeft = parseInt(
+      window.getComputedStyle(cactus).getPropertyValue('left')
+    );
 
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 160) {
       stopGame();
     }
   }, 10);
+};
 
-}
 const jump = function () {
-  if (dino.classList != 'jump') {
+  if (!dino.classList.contains('jump')) {
     dino.classList.add('jump');
     setTimeout(function () {
       dino.classList.remove('jump');
@@ -32,22 +45,33 @@ const jump = function () {
   }
 };
 
-document.addEventListener('keydown', (e) => {
+container.addEventListener('keydown', e => {
   e.preventDefault();
 
-  if (e.code === 'Space' || e.code === "keyup") {
-    startGame();
+  if (e.code === 'Space' || e.code === 'ArrowUp') {
+    if (!gameInterval) startGame();
     jump();
+
   }
 });
 container.addEventListener('click', () => {
-  startGame();
+  if (!gameInterval) startGame();
   jump();
+
 });
 
 function stopGame() {
-  gameOverMessage.classList.add("showMessage")
+  clearInterval(gameInterval);
+  clearInterval(checkCollisionInterval);
+  gameInterval = null;
+  resetGame.classList.add('resetGame');
+  gameOverMessage.classList.add('showMessage');
   dino.style.animation = 'none';
   cactus.style.animation = 'none';
-  points = 0;
+
 }
+
+resetGame.addEventListener('click', () => {
+  resetGame.classList.remove('resetGame'); 
+  startGame(); 
+});
