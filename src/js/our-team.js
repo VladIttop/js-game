@@ -5,15 +5,14 @@ const nextButton = document.querySelector('.button-next');
 let currentIndex = 0;
 
 function updateSliderPosition() {
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const offset = currentIndex * 630
+  slider.style.transform = `translateX(-${offset}px)`;
 }
-function updateSliderPosition1() {
-  slider.style.transform = `translateX(${currentIndex * 100}%)`;
-}
+
 prevButton.addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
-    updateSliderPosition1();
+    updateSliderPosition();
   }
 });
 

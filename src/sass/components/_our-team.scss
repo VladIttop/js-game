@@ -6,12 +6,16 @@
 .slider__title{
     margin-bottom: 36px;
 }
+.slider-container{
+    overflow: hidden;
+}
 .button-previous{
     cursor: pointer;
     user-select: none;
     position:absolute;
     top: 50%;
     left: 92px;
+    z-index: 10;
 }
 .button-next{
     position:absolute;
@@ -25,11 +29,13 @@
 .slider-list{
     @include flex( $justify: none);
     transition: transform 0.5s ease-in-out;
-    // overflow: hidden;
+    width:315px;
+    gap:300px;
 }
 .slider-list__slide {
     margin: 0 auto;
-    min-width: 100%;
+    min-width: 315px;
+    width: 315px;
     box-sizing: border-box;
     @include flex($direction: column);
 }
