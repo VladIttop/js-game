@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         alert('Виберіть оператор.');
       }, 0); 
+
     } else {
       try {
         switch (operator) {
