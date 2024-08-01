@@ -1,10 +1,10 @@
-const modal = document.getElementById("modal_2");
-const backdrop = document.querySelector(".backdrop");
-const closeModalButton = document.querySelector(".modal__close");
+const secondModal = document.getElementById("modal_2");
+const secondBackdrop = document.querySelector(".backdrop");
+const secondCloseModalButton = document.querySelector(".modal__close");
 
-function closeModal() {
-    modal.style.display = "block";
-    backdrop.style.display = "block";
+function secondCloseModal() {
+    secondModal.style.display = "none";
+    secondBackdrop.style.display = "none";
 }
 
-closeModalButton.addEventListener("click", closeModal);
+secondCloseModalButton.addEventListener("click", secondCloseModal);
