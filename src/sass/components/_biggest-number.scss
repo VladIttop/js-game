@@ -19,14 +19,23 @@
             box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
             outline: none;
             border: none;
+            width: 135px;
         }
-        &::placeholder{
-            @include text();
+
+        &::placeholder {
+            @include text(6px);
             color: var(--input-placeholder);
         }
     }
+
     &__paragraph {
         @include text();
         color: var(--background-text-primary);
+    }
+
+    &--input::-webkit-outer-spin-button,
+    &--input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
