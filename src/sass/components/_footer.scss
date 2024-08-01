@@ -10,17 +10,18 @@
     height: 70px;
   }
   &-form {
-    @include flex(flex-start,$wrap: wrap);
+    @include flex(flex-start, $wrap: wrap);
     width: 347px;
     column-gap: 36px;
     row-gap: 18px;
     &__input {
-      max-width: 204px;
+      width: 204px;
+      height: 35px;
       border-radius: 20px;
-      padding: 10px 80px 10px 10px;
+      padding-left: 10px;
       border: 1px solid var(--input-background);
       background-color: var(--input-background);
-      outline:none;
+      outline: none;
       &::placeholder {
         @include text;
         color: var(--input-placeholder);
@@ -33,10 +34,10 @@
       background-color: #000;
       color: #fff;
     }
-    &__text{
+    &__text {
       @include text(6px);
       text-align: left;
-      color: var(--background-text-primary)
+      color: var(--background-text-primary);
     }
   }
 }
