@@ -77,9 +77,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let result;
 
     if (isNaN(firstValue) || isNaN(secondValue)) {
-      result = 'Введіть обидва числа.';
+      calculatorResult.textContent = 'Результат'; 
+      setTimeout(() => {
+        alert('Введіть обидва числа.');
+      }, 0); 
     } else if (!operator) {
-      result = 'Виберіть оператор.';
+      calculatorResult.textContent = 'Результат'; 
+      setTimeout(() => {
+        alert('Виберіть оператор.');
+      }, 0); 
     } else {
       try {
         switch (operator) {
@@ -96,12 +102,20 @@ document.addEventListener('DOMContentLoaded', function () {
             result = divide(firstValue, secondValue);
             break;
           default:
-            result = 'Невірний оператор';
+            calculatorResult.textContent = 'Результат'; 
+            setTimeout(() => {
+              alert('Невірний оператор');
+            }, 0); 
+            return;
         }
+        calculatorResult.textContent = result;
       } catch (error) {
-        result = error.message;
+        calculatorResult.textContent = 'Результат'; 
+        setTimeout(() => {
+          alert(error.message);
+        }, 0); 
       }
     }
-    calculatorResult.textContent = result;
   });
 });
+

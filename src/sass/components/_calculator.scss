@@ -1,5 +1,5 @@
 .calculator {
-  padding: 36px 230px 0;
+  padding-top: 36px;
   &__title {
     @include text(16px);
     color: var(--background-text-primary);
@@ -9,7 +9,7 @@
     background-color: var(--input-background);
     border: 1px solid var(--input-background);
     box-shadow: var(--box-shadow);
-    width: 135px;
+    width: 136px;
     height: 35px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -29,7 +29,7 @@
     @include flex(space-between);
   }
   &-result-container {
-    min-width: 118px;
+    width: 118px;
     height: 35px;
     border-radius: 20px;
     padding: 10px 20px;
