@@ -1,5 +1,3 @@
-const modalFooter = document.querySelector(".footer-modal");
-
 const openModalButton = document.querySelector(".footer-form__btn");
 const closeModalButtonFooter = document.querySelector(".modal__close-footer");
 const inputFooter = document.querySelector(".footer-form__input");
