@@ -6,10 +6,11 @@ let currentIndex = 0;
 
 function updateSliderPosition() {
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const offset = currentIndex * 610
+  slider.style.transform = `translateX(-${offset}px)`;
 }
-function updateSliderPosition1() {
-  slider.style.transform = `translateX(${currentIndex * 100}%)`;
-}
+
+
 prevButton.addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
@@ -24,4 +25,4 @@ nextButton.addEventListener('click', () => {
   }
 });
 
-updateSliderPosition();
+// updateSliderPosition();
