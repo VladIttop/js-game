@@ -9,7 +9,11 @@ function minutesToTime() {
   const hours = Math.floor(minutes / 60);
   const days = Math.floor(hours / 24);
   const remainingMinutes = minutes % 60;
-  resultElement.textContent = `${days}, ${hours.toString().padStart(2, '0')} годин ${remainingMinutes.toString().padStart(2, '0')} хв.`;
+  resultElement.textContent = `${days} дн. ${hours.toString().padStart(2, '0')} годин ${remainingMinutes.toString().padStart(2, '0')} хв.`;
+ 
+  if (hours === "") {
+    hours.textContent = "";
+  }
 }
 const btnResult = document.querySelector(".calculator__wrapper--find")
 btnResult.addEventListener("click", minutesToTime)
