@@ -6,8 +6,7 @@ const userNameInput = document.querySelector(".modal-content__input");
 const headerUser = document.querySelector('#userName')
 console.log(saveButton);
 function closeModal() {
-  modal.style.display = "none";
-  backdrop.style.display = "none";
+  backdrop.classList.add('is-hidden');
 }
 
 closeModalButton.addEventListener("click", closeModal);

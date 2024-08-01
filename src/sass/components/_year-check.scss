@@ -6,7 +6,8 @@
 }
 
 .year_content {
-@include flex(space-between);
+  @include flex(space-between);
+  width: 600px;
 }
 
 .pop_games {
@@ -41,17 +42,20 @@
   @include flex();
   box-shadow: 3px 3px 0px 0px #00000040;
 }
+
 .message {
   @include text();
+  width: 250px;
 }
+
 .message.success {
   color: var(--green-text);
-  margin-left: 130px;
+  // margin-left: 130px;
 }
 
 .message.error {
   color: var(--red-text);
-  margin-left: 149px;
+  // margin-left: 149px;
 
 }
 
