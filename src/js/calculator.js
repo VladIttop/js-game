@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isNaN(firstValue) || isNaN(secondValue)) {
       result = 'Введіть обидва числа.';
     } else if (!operator) {
-      result = 'Виберіть оператор.';
+      alert('Виберіть оператор.');
     } else {
       try {
         switch (operator) {

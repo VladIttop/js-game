@@ -2,14 +2,15 @@
     padding-top: 36px;
     .inner-container{
         @include flex();
-        gap: 161px;
+        gap: 36px;
+        flex-flow: column;
     }
 
     &__title {
         @include text(16px);
         color: getColor("background-text-primary");
         text-align: center;
-        margin-bottom: 36px;
+    
     }
 
     &__wrapper {
