@@ -1,0 +1,2 @@
+var openModalButton=document.querySelector(".footer-form__btn"),closeModalButtonFooter=document.querySelector(".modal__close-footer"),inputFooter=document.querySelector(".footer-form__input");function closeModal(){modalFooter.classList.add("is-hidden")}var openModal=function(){if(""===inputFooter.value||!inputFooter.value.includes("@"))return alert("Введіть коректний email");modalFooter.classList.remove("is-hidden")};closeModalButtonFooter.addEventListener("click",closeModal),openModalButton.addEventListener("click",openModal);
+//# sourceMappingURL=index.fb24a5d7.js.map
