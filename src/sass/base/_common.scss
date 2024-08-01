@@ -28,6 +28,11 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+  border: none;
+}
+
 button {
   display: block;
   border: none;
@@ -45,7 +50,7 @@ img {
   max-width: 1090px;
   margin: 0 auto;
   background-color: var(--secondary-text);
-  z-index: 9999;
+  // z-index: 9999;
 }
 
 .main {
@@ -61,3 +66,9 @@ img {
   margin: 36px auto 0 auto;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+}
