@@ -1,10 +1,19 @@
-const secondModal = document.getElementById("modal_2");
-const secondBackdrop = document.querySelector(".backdrop");
-const secondCloseModalButton = document.querySelector(".modal__close");
+const openModalButton = document.querySelector(".footer-form__btn");
+const closeModalButtonFooter = document.querySelector(".modal__close-footer");
+const inputFooter = document.querySelector(".footer-form__input");
 
-function secondCloseModal() {
-    secondModal.style.display = "none";
-    secondBackdrop.style.display = "none";
+function closeModal() {
+    modalFooter.classList.add("is-hidden");
+}
+const openModal = () => {
+    if (inputFooter.value === "" || !inputFooter.value.includes("@")) {
+        return alert("Введіть коректний email");
+    }
+    modalFooter.classList.remove("is-hidden");
 }
 
-secondCloseModalButton.addEventListener("click", secondCloseModal);
+closeModalButtonFooter.addEventListener("click", closeModal);
+
+openModalButton.addEventListener("click", openModal);
+
+

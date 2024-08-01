@@ -1,5 +1,5 @@
-const resultElement = document.querySelector(".calculator__time")
-const inputElement = document.querySelector(".calculator__wrapper--input")
+const resultElement = document.querySelector(".time-calculator__time")
+const inputElement = document.querySelector(".time-calculator__wrapper--input")
 function minutesToTime() {
   let minutes = +inputElement.value;
   console.log(minutes)
@@ -15,5 +15,5 @@ function minutesToTime() {
     hours.textContent = "";
   }
 }
-const btnResult = document.querySelector(".calculator__wrapper--find")
+const btnResult = document.querySelector(".time-calculator__wrapper--find")
 btnResult.addEventListener("click", minutesToTime)
