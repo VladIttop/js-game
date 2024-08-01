@@ -19,15 +19,17 @@
   align-items: center;
   top: 0;
   left: 0;
+  ;
   z-index: 1000;
 }
 .modal .inner-container {
   @include flex($direction: column);
-  border-radius: 20px;
 }
+
 .modal .inner-container {
   position: relative;
 }
+
 .modal__close {
   top: 20;
   right: 30;
@@ -38,26 +40,37 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 .modal__close:hover,
 .modal__close:focus {
   color: var(--background-text-primary);
   text-decoration: none;
   cursor: pointer;
 }
+
 .modal-content {
-  width: 392px;
+
   text-align: center;
 }
+
 .modal-content__text {
   @include text();
   text-align: center;
   margin-bottom: 42px;
   display: block;
+  font-family: "Inter", sans-serif;
   margin-top: 30px;
 }
+
 .modal-content__name {
   display: block;
+  @include text();
+  text-align: center;
+
+  display: block;
+  font-family: "Inter", sans-serif;
 }
+
 .modal-content__input {
   background-color: var(--input-background);
   outline: none;
@@ -67,7 +80,11 @@
   margin-bottom: 18px;
   width: 169px;
   height: 35px;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 10px;
 }
+
 .modal-content__button {
   background-color: var(--background-text-primary);
   color: var(--secondary-text);
@@ -77,11 +94,13 @@
   margin-bottom: 47px;
   padding: 10px 20px 10px 20px;
 }
+
 .modal__svg {
   width: 30px;
   height: 30px;
   color: getColor(background-text-primary);
 }
+
 .sword {
   position: absolute;
   top: 140;
@@ -93,11 +112,13 @@
   top: 220;
   left: 85;
 }
+
 .puzzle {
   position: absolute;
   top: 140;
   right: 41;
 }
+
 .tic-tac-toe {
   position: absolute;
   top: 220;

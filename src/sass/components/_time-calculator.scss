@@ -1,0 +1,71 @@
+.time-calculator {
+    padding-top: 36px;
+
+    .inner-container {
+        @include flex();
+        gap: 36px;
+        flex-flow: column;
+    }
+
+    &__title {
+        @include text(16px);
+        color: getColor("background-text-primary");
+        text-align: center;
+
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+        margin-top: 36px;
+    }
+
+    &__time {
+        font-family: "Montserrat Alternates", sans-serif;
+        ;
+        font-size: 12px;
+        width: 200px;
+    }
+
+    &__wrapper {
+        @include flex();
+        position: relative;
+        width: 150px;
+
+        &--input {
+            border-radius: 20px;
+            padding: 10px 45px 10px 10px;
+            border: none;
+            outline: none;
+            background-color: var(--input-background);
+            border: 1px solid var(--input-background);
+            box-shadow: var(--box-shadow);
+            width: 150px;
+
+
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 12px;
+
+            &::placeholder {
+                @include text();
+                color: getColor("input-placeholder");
+            }
+        }
+
+        &--find {
+            display: inline-flex;
+            padding: 10px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 0px 20px 20px 0px;
+            background: #000;
+            right: 0;
+          
+
+            position: absolute;
+        }
+    }
+}

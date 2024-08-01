@@ -27,6 +27,22 @@ ul {
 a {
   text-decoration: none;
 }
+input {
+  outline: none;
+  &:focus {
+    outline: none;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+    // border: 1px solid #ccc         ;
+  }
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+input {
+  outline: none;
+  border: none;
+}
 
 button {
   display: block;
@@ -45,10 +61,12 @@ img {
   max-width: 1090px;
   margin: 0 auto;
   background-color: var(--secondary-text);
+  // z-index: 9999;
 }
 
 .main {
   background: url("../images/main-bg.png") no-repeat center center/cover;
+
 }
 
 .border {
@@ -59,3 +77,9 @@ img {
   margin: 36px auto 0 auto;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+}
