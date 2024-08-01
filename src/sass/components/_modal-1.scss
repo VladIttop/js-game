@@ -21,7 +21,7 @@
   left: 0;
   z-index: 1000;
 }
-.inner-container {
+.modal .inner-container {
   @include flex($direction: column);
   border-radius: 20px;
 }
