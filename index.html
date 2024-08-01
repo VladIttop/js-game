@@ -1,1 +1,397 @@
-<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Page title</title><link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet"><link rel="stylesheet" href="/js-game/index.f12d2fa7.css"></head><body> <header class="header"> <div class="inner-container"> <div class="header-left"> <a href="#" class="header-left__link"> <img class="header-left__logo" src="/js-game/logo.0c0c0e54.svg" alt="logo"> </a> <div class="drop-down"> <div class="drop-menu"> <button class="clickText drop-menu__btn" type="button"> Інтерактив <svg class="drop-menu__img" xmlns="http://www.w3.org/2000/svg" width="11" height="7" fill="none"> <path stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75" d="M10 1 5.5 6 1 1"></path> </svg> </button> </div> <ul class="dropdown-menu"> <li class="dropdown-menu__item" id="numerical"> <p class="dropdown-menu__link">Числовий</p> </li> <li class="dropdown-menu__item" id="game"> <p class="dropdown-menu__link">Ігровий</p> </li> <li class="dropdown-menu__item" id="acquaintance"> <p class="dropdown-menu__link">Ознайомчий</p> </li> <li class="dropdown-menu__item" id="showSections"> <p class="dropdown-menu__link">Всі секції</p> </li> </ul> </div> <ul class="header-list"> <li> <a href="#slider" class="header-list__link">Наша команда</a> </li> <li> <a href="#footer" class="header-list__link">Контакти</a> </li> </ul> </div> <div class="header-right"> <button class="header-right__btn"> <div class="header-right-btn-div"> <img src="/js-game/light.0ed4d3e0.svg" alt="" class="header-right-btn-div__img img1"> <img class="header-right-btn-div__img img2" src="/js-game/dark.8ff7cd6e.svg" alt="dark svg"> </div> </button> <p class="header-right__text"> Вітаємо, <span id="userName">User</span>! </p> </div> </div> </header> <main class="main"> <div class="inner-container"> <h1 class="pop_games">Популярні інетрактивні ігри</h1> <hr class="border"> <section class="year-check" id="year-check"> <div class="inner-container"> <div class="border"></div> <h2 class="year_chek">Перевір в який рік ти народився</h2> <div class="year_content"> <div class="year__wraper"> <input type="number" id="year-input" placeholder="Введіть рік народження"> <button class="year"> <img class="year__loop" src="/js-game/search-loop.d624aa05.svg" alt="loop"> </button> </div> <p class="message" id="message"></p> </div> </div> <hr class="border"> </section> <section class="guess-number" id="guess-number"> <h1 class="guess-number">Вгадай число, яке загадав комп'ютер</h1> <div class="inner-container"> <div class="input-container"> <input type="number" id="number-input" placeholder="Введіть число"> <button class="guess" onclick="checkNumber()"><img src="/js-game/search-loop.d624aa05.svg" alt="loop"></button> </div> <div class="message_numb" id="message_numb"></div> </div> <hr class="border"> </section> <section id="rock-paper" class="rock-paper"> <div class="inner-container"> <h5 class="rock-paper__title">Камінь - ножиці - папір</h5> <div class="rock-paper-list-container"> <ul class="rock-paper-list"> <li class="rock-paper-list__item"> <button class="rock-paper-list__button" type="button"> <img class="rock-paper-list__icon" src="/js-game/stone.cb166499.svg" alt="stone"> </button> </li> <li class="rock-paper-list__item"> <button class="rock-paper-list__button" type="button"> <img class="rock-paper-list__icon" src="/js-game/scissors.bba62a72.svg" alt="scissors"> </button> </li> <li class="rock-paper-list__item"> <button class="rock-paper-list__button" type="button"> <img class="rock-paper-list__icon" src="/js-game/paper.a31518f0.svg" alt="paper"> </button> </li> </ul> <div class="rock-paper-score-container"> <h5 class="rock-paper-score__title">Рахунок:</h5> <ul class="rock-paper-score-list"> <li class="rock-paper-score-list__item"> <p class="rock-paper-score-list__text rock-paper-score-list__text--computer"> Комп’ютер - <span class="rock-paper-list__span rock-paper-list__span--computer">0</span> </p> </li> <li class="rock-paper-score-list__item"> <p class="rock-paper-score-list__text rock-paper-score-list__text--person"> Ви - <span class="rock-paper-list__span rock-paper-list__span--person">0</span> </p> </li> </ul> </div> </div> <p class="rock-paper__result"></p> <button class="rock-paper-computer-option__btn" type="button"> Варіант комп’ютера </button> <hr class="border"> </div> </section> <section class="calculator section" id="calculator"> <div class="inner-container"> <h5 class="calculator__title">Калькулятор</h5> <div class="calculator-flex-container"> <input type="number" class="calculator__input calculator__input--first" placeholder="Введіть число"> <ul class="calculator-operators-list"> <li class="calculator-operators-list__item"> <button class="calculator-operators-list__button calculator-operators-list__button--addition" type="button"> + </button> </li> <li class="calculator-operators-list__item"> <button class="calculator-operators-list__button calculator-operators-list__button--multiplication" type="button"> * </button> </li> <li class="calculator-operators-list__item"> <button class="calculator-operators-list__button calculator-operators-list__button--substraction" type="button"> - </button> </li> <li class="calculator-operators-list__item"> <button class="calculator-operators-list__button calculator-operators-list__button--division" type="button"> / </button> </li> </ul> <input type="number" class="calculator__input calculator__input--second" placeholder="Введіть число"> <button class="calculator-result__button" type="button">=</button> <div class="calculator-result-container"> <p class="calculator__result">Результат</p> </div> </div> <hr class="border"> </div> </section> <section class="time-calculator"> <h2 class="time-calculator__title title">Калькулятор часу</h2> <div class="inner-container"> <div class="time-calculator__wrap"> <div class="time-calculator__wrapper"> <input class="time-calculator__wrapper--input" type="number" id="time" placeholder="Введіть число"> <button class="time-calculator__wrapper--find"> <img src="/js-game/search-loop.d624aa05.svg" alt=""> </button> </div> <h3 class="time-calculator__time">0 дн. 0 годин 0 хв.</h3> </div> <hr class="border"> </div> </section> <section class="dinosaur" id="dinosaur"> <div class="inner-container"> <h2 class="dinosaur__title">Google динозавр</h2> <div class="dinosaur__container"> <img class="dinosaur__dino" src="/js-game/dino.ff533fd1.png" alt="dino"> <img class="dinosaur__cactus" src="/js-game/cactus.3131688e.png" alt="cactus"> <p class="dinosaur__points">0</p> <img class="gameOverMessage" id="gameOverMessage" src="/js-game/game-over.358a0bc7.png"> <button id="startOver"><img src="/js-game/reset.2caa369d.png" alt="reset"></button> </div> <hr class="border"> </div> </section> <section class="football" id="football"> <div class="inner-container"> <h2 class="football__title title">Футбол</h2> <div class="football-pitch"> <img src="/js-game/football.d49268c6.svg" alt="football ball" class="football-pitch__ball"> </div> <hr class="border"> </div> </section> <section class="number section" id="biggest-number"> <div class="inner-container"> <h2 class="number__title">Введіть 3 числа</h2> <div class="number__form"> <input class="number__form--input" type="number" placeholder="Введіть число"> <input class="number__form--input" type="number" placeholder="Введіть число"> <input class="number__form--input" type="number" placeholder="Введіть число"> </div> <p class="number__paragraph">Найбільше число, яке ви ввели - (<span id="biggestNumber">число</span>)</p> <hr class="border"> </div> </section> <section class="slider" id="slider"> <div class="inner-container"> <h2 class="slider__title">Наша команда</h2> <button type="button" class="button-previous"> <img class="button-img img-previous" src="/js-game/arrow-left.652b3e23.svg"> </button> <ul class="slider-list"> <li class="slider-list__slide"> <div class="slider-list__box"> <img class="slider-list__img" src="/js-game/vlad.bfb8f1de.png" alt="vlad"> </div> <p class="slider-list__name">Влад</p> <p class="slider-list__info"> Він тім-лід команди, він зробив header, футбол і обери вченого. </p> </li> <li class="slider-list__slide"> <div class="slider-list__box"> <img class="slider-list__img" src="/js-game/max.2aeff17c.jpg" alt="tim"> </div> <p class="slider-list__name">Максим</p> <p class="slider-list__info"> Він QA команди, він зробив гру камінь-ножиці-папір, калькулятор і footer. </p> </li> <li class="slider-list__slide"> <div class="slider-list__box"> <img class="slider-list__img" src="/js-game/tim.3c156769.jpg" alt="tim"> </div> <p class="slider-list__name">Тім</p> <p class="slider-list__info"> Він PM команди, він зробив калькулятор і введіть 3 числа. </p> </li> <li class="slider-list__slide"> <div class="slider-list__box"> <img class="slider-list__img" src="/js-game/sacha.073f7af2.png" alt="sacha"> </div> <p class="slider-list__name">Саша</p> <p class="slider-list__info"> Він розробник команди, він зробив модалку 1, гугл динозаврик і слайдер наша команда. </p> </li> <li class="slider-list__slide"> <div class="slider-list__box"> <img class="slider-list__img" src="/js-game/yura.81015641.png" alt="yura"> </div> <p class="slider-list__name">Юра</p> <p class="slider-list__info"> Він розробник команди, він зробив модалку 2, перевір в який рік ти народився і вгадай число. </p> </li> </ul> <button type="button" class="button-next"> <img class="button-img img-next" src="/js-game/arrow-right.9df17330.svg"> </button> <hr class="border"> </div> </section> <section class="scientist" id="scientist"> <div class="inner-container"> <h2 class="scientist__title title">Обери вченого/их</h2> <ul class="scientist-list"></ul> <ul class="facts-list"></ul> </div> </section> </div> </main> <footer class="footer" id="footer"> <div class="inner-container"> <a href="#" class="footer__link"> <img class="footer__logo" src="/js-game/logo.0c0c0e54.svg" alt="logo"> </a> <ul class="footer-contact-list"> <li class="footer-contact-list__item"> <a href="tel:+381234567890" class="footer-contact-list__link">Тел: +38 (123) 456 78 90</a> </li> <li class="footer-contact-list__item"> <a href="mailto:codingmagic@gmail.com" class="footer-contact-list__link">E-Mail: codingmagic@gmail.com</a> </li> <li cclass="footer-contact-list__item"> <a href="#" class="footer-contact-list__link">Facebook: CodingMagic</a> </li> <li class="footer-contact-list__item"> <a href="#" class="footer-contact-list__link">Twitter: CodingMagic</a> </li> <li class="footer-contact-list__item"> <a href="#" class="footer-contact-list__link">Instagram: CodingMagic</a> </li> </ul> <div class="footer-form"> <input type="email" class="footer-form__input" placeholder="Ваша ел. адреса..."> <button class="footer-form__btn" data-model-open="">Підписатись</button> <p class="footer-form__text"> *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті </p> </div> </div> </footer> <div id="modal " class="backdrop modal-header"> <div class="modal"> <div class="inner-container"> <button class="modal__close"> <img src="/js-game/close-icon.660c18cb.svg"> </button> <div class="modal-content"> <p class="modal-content__text"> Привіт!<br> Ви потрапили на сайт інтерактивних ігор та завдань <br> Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br> Бажаємо Вам гарно провести час! </p> <p class="modal-content__name">Ведіть своє ім'я:</p> <input class="modal-content__input" placeholder="Ваше ім’я..."> </div> <button class="modal-content__button" id="saveButton">Зберегти</button> <img class="modal__svg sword" src="/js-game/sword.55fed769.svg"> <img class="modal__svg puzzle" src="/js-game/puzzle.acf5ad70.svg"> <img class="game-development modal__svg" src="/js-game/game-development.11ad4891.svg"> <img class="modal__svg tic-tac-toe" src="/js-game/tic-tac-toe.7eb643fc.svg"> </div> </div> </div> <section class="backdrop footer-modal is-hidden"> <div id="modal_2" class="modal_2"> <div class="inner-container"> <p class="thank_modal">Дякую за підписку!</p> <button class="modal__close modal__close-footer"> <img src="/js-game/close-icon.660c18cb.svg"> </button> <div class="icons_modal"> <img class="modal_img modal_sword" src="/js-game/sword.55fed769.svg"> <img class="modal_img modal_puzzle" src="/js-game/puzzle.acf5ad70.svg"> <img class="modal_game modal_img" src="/js-game/game-development.11ad4891.svg"> <img class="modal_img modal_toe" src="/js-game/tic-tac-toe.7eb643fc.svg"> </div> </div> </div> </section>  <script src="/js-game/index.86c7e7f3.js"></script> <script src="/js-game/index.a0956454.js"></script> <script src="/js-game/index.dee94e25.js"></script> <script src="/js-game/index.fca44471.js"></script> <script src="/js-game/index.99375658.js"></script> <script src="/js-game/index.53300fa7.js"></script> <script src="/js-game/index.875c9c2e.js"></script> <script src="/js-game/index.7d66afff.js"></script> <script src="/js-game/index.0646c0e6.js"></script> <script src="/js-game/index.7c7a9e73.js"></script> <script src="/js-game/index.c6191643.js"></script> <script src="/js-game/index.fb24a5d7.js"></script> <script src="/js-game/index.f7eb71d6.js"></script> <script src="/js-game/index.b63398c9.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.b07a87f3.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="inner-container">
+    <div class="header-left">
+      <a href="#" class="header-left__link">
+        <img class="header-left__logo" src="/logo.cd13699a.svg" alt="logo">
+      </a>
+      <div class="drop-down">
+        <div class="drop-menu">
+          <button class="drop-menu__btn clickText" type="button">
+            Інтерактив
+            <svg class="drop-menu__img" xmlns="http://www.w3.org/2000/svg" width="11" height="7" fill="none">
+              <path stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75" d="M10 1 5.5 6 1 1"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu__item" id="numerical">
+            <p class="dropdown-menu__link">Числовий</p>
+          </li>
+          <li class="dropdown-menu__item" id="game">
+            <p class="dropdown-menu__link">Ігровий</p>
+          </li>
+          <li class="dropdown-menu__item" id="acquaintance">
+            <p class="dropdown-menu__link">Ознайомчий</p>
+          </li>
+          <li class="dropdown-menu__item" id="showSections">
+            <p class="dropdown-menu__link">Всі секції</p>
+          </li>
+        </ul>
+      </div>
+      <ul class="header-list">
+        <li>
+          <a href="#slider" class="header-list__link">Наша команда</a>
+        </li>
+        <li>
+          <a href="#footer" class="header-list__link">Контакти</a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-right">
+      <button class="header-right__btn">
+        <div class="header-right-btn-div">
+          <img src="/light.14851678.svg" alt="" class="header-right-btn-div__img img1">
+          <img class="header-right-btn-div__img img2" src="/dark.c6ec39af.svg" alt="dark svg">
+        </div>
+      </button>
+      <p class="header-right__text">
+        Вітаємо, <span id="userName">User</span>!
+      </p>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <div class="inner-container">
+        <h1 class="pop_games">Популярні інетрактивні ігри</h1>
+        <hr class="border">
+        <section class="year-check" id="year-check">
+  <div class="inner-container">
+    <div class="border"></div>
+
+    <h2 class="year_chek">Перевір в який рік ти народився</h2>
+    <div class="year_content">
+      <div class="year__wraper">
+        <input type="number" id="year-input" placeholder="Введіть рік народження">
+        <button class="year">
+          <img class="year__loop" src="/search-loop.0ef819b4.svg" alt="loop">
+        </button>
+      </div>
+      <p class="message" id="message"></p>
+    </div>
+  </div>
+  <hr class="border">
+</section>
+
+        <section class="guess-number" id="guess-number">
+    <h1 class="guess-number">Вгадай число, яке загадав комп'ютер</h1>
+    <div class="inner-container">
+        <div class="input-container">
+            <input type="number" id="number-input" placeholder="Введіть число">
+            <button class="guess" onclick="checkNumber()"><img src="/search-loop.0ef819b4.svg" alt="loop"></button>
+        </div>
+        <div class="message_numb" id="message_numb"></div>
+    </div>
+    <hr class="border">
+</section>
+
+        <section id="rock-paper" class="rock-paper">
+  <div class="inner-container">
+    <h5 class="rock-paper__title">Камінь - ножиці - папір</h5>
+    <div class="rock-paper-list-container">
+      <ul class="rock-paper-list">
+        <li class="rock-paper-list__item">
+          <button class="rock-paper-list__button" type="button">
+            <img class="rock-paper-list__icon" src="/stone.7f44d721.svg" alt="stone">
+          </button>
+        </li>
+        <li class="rock-paper-list__item">
+          <button class="rock-paper-list__button" type="button">
+            <img class="rock-paper-list__icon" src="/scissors.8402b0f7.svg" alt="scissors">
+          </button>
+        </li>
+        <li class="rock-paper-list__item">
+          <button class="rock-paper-list__button" type="button">
+            <img class="rock-paper-list__icon" src="/paper.1a02f93b.svg" alt="paper">
+          </button>
+        </li>
+      </ul>
+      <div class="rock-paper-score-container">
+        <h5 class="rock-paper-score__title">Рахунок:</h5>
+        <ul class="rock-paper-score-list">
+          <li class="rock-paper-score-list__item">
+            <p class="rock-paper-score-list__text rock-paper-score-list__text--computer">
+              Комп’ютер -
+              <span class="rock-paper-list__span rock-paper-list__span--computer">0</span>
+            </p>
+          </li>
+          <li class="rock-paper-score-list__item">
+            <p class="rock-paper-score-list__text rock-paper-score-list__text--person">
+              Ви -
+              <span class="rock-paper-list__span rock-paper-list__span--person">0</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="rock-paper__result"></p>
+    <button class="rock-paper-computer-option__btn" type="button">
+      Варіант комп’ютера
+    </button>
+    <hr class="border">
+  </div>
+</section>
+
+        <section class="calculator section" id="calculator">
+  <div class="inner-container">
+    <h5 class="calculator__title">Калькулятор</h5>
+    <div class="calculator-flex-container">
+      <input type="number" class="calculator__input calculator__input--first" placeholder="Введіть число">
+      <ul class="calculator-operators-list">
+        <li class="calculator-operators-list__item">
+          <button class="calculator-operators-list__button calculator-operators-list__button--addition" type="button">
+            +
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button class="calculator-operators-list__button calculator-operators-list__button--multiplication" type="button">
+            *
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button class="calculator-operators-list__button calculator-operators-list__button--substraction" type="button">
+            -
+          </button>
+        </li>
+        <li class="calculator-operators-list__item">
+          <button class="calculator-operators-list__button calculator-operators-list__button--division" type="button">
+            /
+          </button>
+        </li>
+      </ul>
+      <input type="number" class="calculator__input calculator__input--second" placeholder="Введіть число">
+      <button class="calculator-result__button" type="button">=</button>
+      <div class="calculator-result-container">
+        <p class="calculator__result">Результат</p>
+      </div>
+    </div>
+    <hr class="border">
+  </div>
+</section>
+
+        <section class="time-calculator">
+  <h2 class="time-calculator__title title">Калькулятор часу</h2>
+  <div class="inner-container">
+    <div class="time-calculator__wrap">
+      <div class="time-calculator__wrapper">
+        <input class="time-calculator__wrapper--input" type="number" id="time" placeholder="Введіть число">
+        <button class="time-calculator__wrapper--find">
+          <img src="/search-loop.0ef819b4.svg" alt="">
+        </button>
+      </div>
+      <h3 class="time-calculator__time">0 дн. 0 годин  0 хв.</h3>
+    </div>
+    <hr class="border">
+  </div>
+</section>
+
+        <section class="dinosaur" id="dinosaur">
+  <div class="inner-container">
+    <h2 class="dinosaur__title">Google динозавр</h2>
+    <div class="dinosaur__container">
+      <img class="dinosaur__dino" src="/dino.fd6bc63c.png" alt="dino">
+      <img class="dinosaur__cactus" src="/cactus.00db284f.png" alt="cactus">
+      <p class="dinosaur__points">0</p>
+      <img class="gameOverMessage" id="gameOverMessage" src="/game-over.65e98a84.png">
+      <button id="startOver"><img src="/reset.8718c07d.png" alt="reset"></button>
+    </div>
+    <hr class="border">
+  </div>
+</section>
+
+        <section class="football" id="football">
+  <div class="inner-container">
+    <h2 class="football__title title">Футбол</h2>
+    <div class="football-pitch">
+      <img src="/football.55099de7.svg" alt="football ball" class="football-pitch__ball">
+    </div>
+    <hr class="border">
+  </div>
+</section>
+
+        <section class="number section" id="biggest-number">
+    <div class="inner-container">
+        <h2 class="number__title">Введіть 3 числа</h2>
+        <div class="number__form">
+            <input class="number__form--input" type="number" placeholder="Введіть число">
+            <input class="number__form--input" type="number" placeholder="Введіть число">
+            <input class="number__form--input" type="number" placeholder="Введіть число">
+        </div>
+        <p class="number__paragraph">Найбільше число, яке ви ввели - (<span id="biggestNumber">число</span>)</p>
+        <hr class="border">
+    </div>
+</section>
+
+        <section class="slider" id="slider">
+  <div class="inner-container">
+    <h2 class="slider__title">Наша команда</h2>
+    <button type="button" class="button-previous">
+      <img class="button-img img-previous" src="/arrow-left.7f101fb4.svg">
+    </button>
+    <ul class="slider-list">
+      <li class="slider-list__slide">
+        <div class="slider-list__box">
+          <img class="slider-list__img" src="/vlad.99be3f81.png" alt="vlad">
+        </div>
+        <p class="slider-list__name">Влад</p>
+        <p class="slider-list__info">
+          Він тім-лід команди, він зробив header, футбол і обери вченого.
+        </p>
+      </li>
+      <li class="slider-list__slide">
+        <div class="slider-list__box">
+          <img class="slider-list__img" src="/max.e927cfb8.jpg" alt="tim">
+        </div>
+        <p class="slider-list__name">Максим</p>
+        <p class="slider-list__info">
+          Він QA команди, він зробив гру камінь-ножиці-папір, калькулятор і footer.
+        </p>
+      </li>
+      <li class="slider-list__slide">
+        <div class="slider-list__box">
+          <img class="slider-list__img" src="/tim.074752ff.jpg" alt="tim">
+        </div>
+        <p class="slider-list__name">Тім</p>
+        <p class="slider-list__info">
+          Він PM команди, він зробив калькулятор і введіть 3 числа.
+        </p>
+      </li>
+      <li class="slider-list__slide">
+        <div class="slider-list__box">
+          <img class="slider-list__img" src="/sacha.a8740c16.png" alt="sacha">
+        </div>
+        <p class="slider-list__name">Саша</p>
+        <p class="slider-list__info">
+          Він розробник команди, він зробив модалку 1, гугл динозаврик і слайдер наша команда.
+        </p>
+      </li>
+      <li class="slider-list__slide">
+        <div class="slider-list__box">
+          <img class="slider-list__img" src="/yura.82770023.png" alt="yura">
+        </div>
+        <p class="slider-list__name">Юра</p>
+        <p class="slider-list__info">
+          Він розробник команди, він зробив модалку 2, перевір в який рік ти народився і вгадай число.
+        </p>
+      </li>
+    </ul>
+    <button type="button" class="button-next">
+      <img class="button-img img-next" src="/arrow-right.01376390.svg">
+    </button>
+    <hr class="border">
+  </div>
+</section>
+        <section class="scientist" id="scientist">
+  <div class="inner-container">
+    <h2 class="scientist__title title">Обери вченого/их</h2>
+    <ul class="scientist-list"></ul>
+    <ul class="facts-list"></ul>
+  </div>
+</section>
+
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+  <div class="inner-container">
+    <a href="#" class="footer__link">
+      <img class="footer__logo" src="/logo.cd13699a.svg" alt="logo">
+    </a>
+    <ul class="footer-contact-list">
+      <li class="footer-contact-list__item">
+        <a href="tel:+381234567890" class="footer-contact-list__link">Тел: +38 (123) 456 78 90</a>
+      </li>
+      <li class="footer-contact-list__item">
+        <a href="mailto:codingmagic@gmail.com" class="footer-contact-list__link">E-Mail: codingmagic@gmail.com</a>
+      </li>
+      <li cclass="footer-contact-list__item">
+        <a href="#" class="footer-contact-list__link">Facebook: CodingMagic</a>
+      </li>
+      <li class="footer-contact-list__item">
+        <a href="#" class="footer-contact-list__link">Twitter: CodingMagic</a>
+      </li>
+      <li class="footer-contact-list__item">
+        <a href="#" class="footer-contact-list__link">Instagram: CodingMagic</a>
+      </li>
+    </ul>
+    <div class="footer-form">
+      <input type="email" class="footer-form__input" placeholder="Ваша ел. адреса...">
+      <button class="footer-form__btn" data-model-open="">Підписатись</button>
+      <p class="footer-form__text">
+        *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <div id="modal " class="backdrop modal-header">
+  <div class="modal">
+    <div class="inner-container">
+      <button class="modal__close">
+        <img src="/close-icon.7a4f0d49.svg">
+      </button>
+      <div class="modal-content">
+        <p class="modal-content__text">
+          Привіт!<br>
+          Ви потрапили на сайт інтерактивних ігор та завдань <br> Надіємось, що вам
+          сподобається і ви отримаєте позитивні емоції! <br> Бажаємо Вам гарно
+          провести час!
+        </p>
+        <p class="modal-content__name">Ведіть своє ім'я:</p>
+        <input class="modal-content__input" placeholder="Ваше ім’я...">
+      </div>
+      <button class="modal-content__button" id="saveButton">Зберегти</button>
+      <img class="modal__svg sword" src="/sword.aea8abe3.svg">
+      <img class="modal__svg puzzle" src="/puzzle.117a9e25.svg">
+
+      <img class="modal__svg game-development" src="/game-development.41d4774f.svg">
+      <img class="modal__svg tic-tac-toe" src="/tic-tac-toe.a6596307.svg">
+    </div>
+  </div>
+</div>
+
+    <section class="backdrop is-hidden footer-modal">
+  <div id="modal_2" class="modal_2">
+    <div class="inner-container">
+      <p class="thank_modal">Дякую за підписку!</p>
+      <button class="modal__close-footer modal__close">
+        <img src="/close-icon.7a4f0d49.svg">
+      </button>
+      <div class="icons_modal">
+        <img class="modal_sword modal_img" src="/sword.aea8abe3.svg">
+        <img class="modal_puzzle modal_img" src="/puzzle.117a9e25.svg">
+
+        <img class="modal_game modal_img" src="/game-development.41d4774f.svg">
+        <img class="modal_toe modal_img" src="/tic-tac-toe.a6596307.svg">
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- JS -->
+    <script src="/index.7afa73b1.js"></script>
+
+    <script src="/index.b4f17664.js"></script>
+    <script src="/index.7af183d6.js"></script>
+    <script src="/index.67c09190.js"></script>
+    <script src="/index.aec1eaac.js"></script>
+    <script src="/index.5ba1eaea.js"></script>
+    <script src="/index.1e977448.js"></script>
+    <script src="/index.0b6960bc.js"></script>
+    <script src="/index.f251a842.js"></script>
+    <script src="/index.50165830.js"></script>
+    <script src="/index.351ad4de.js"></script>
+    <script src="/index.68f4e494.js"></script>
+    <script src="/index.f02d3e02.js"></script>
+    <script src="/index.837594c1.js"></script>
+  </body>
+</html>
