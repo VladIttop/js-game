@@ -1,7 +1,7 @@
 const openModalButton = document.querySelector(".footer-form__btn");
 const closeModalButtonFooter = document.querySelector(".modal__close-footer");
 const inputFooter = document.querySelector(".footer-form__input");
-
+const modalFooter = document.querySelector('.footer-modal')
 function closeModal() {
     modalFooter.classList.add("is-hidden");
 }
